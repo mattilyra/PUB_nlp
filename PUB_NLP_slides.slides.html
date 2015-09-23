@@ -232,10 +232,14 @@ div.output_prompt {
 <li>pandas</li>
 <li>gensim</li>
 <li>networkx</li>
+<li>graphviz</li>
+<li>libtool</li>
 </ul>
 
-<pre><code>$conda create -n PUB_NLP python=3 numpy scipy nltk sklearn matplotlib pandas gensim networkx
+<pre><code>$brew install libtool
+$conda create -n PUB_NLP python=3 numpy scipy nltk sklearn matplotlib pandas gensim networkx graphviz
 $source activate PUB_NLP</code></pre>
+<p><em>On OsX use</em> <code>brew</code> <em>on GNU/linux</em> <code>apt-get</code> <em>or</em> <code>yum</code> <em>to install</em> <code>libtool</code> <em>if needed</em></p>
 
 </div>
 </div>
@@ -1735,6 +1739,38 @@ XkREJMUp2IuIiKQ4BXsREZEU9/8ARSb7LJi3ZwsAAAAASUVORK5CYII=
 </div>
     </aside></section><section>
     
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<table>
+<tr><th>documents</th><th colspan=7><center>features</center></th></tr>
+<tr><td></td> <td>,</td><td>the</td><td>.</td><td>a</td><td>and</td><td>of</td><td>to</td></tr>
+<tr><td>0</td> <td>0</td><td>0</td><td>2</td><td>1</td><td>0</td><td>0</td><td>1</td></tr>
+<tr><td>1</td> <td>1</td><td>0</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td></tr>
+<tr><td>2</td> <td>0</td><td>5</td><td>0</td><td>3</td><td>1</td><td>0</td><td>0</td></tr>
+</table>
+</div>
+</div>
+</div></section><section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<table>
+<tr><th>documents</th><th colspan=7><center>features</center></th></tr>
+<tr><td></td> <td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+<tr><td>0</td> <td>0</td><td>0</td><td>2</td><td>1</td><td>0</td><td>0</td><td>1</td></tr>
+<tr><td>1</td> <td>1</td><td>0</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td></tr>
+<tr><td>2</td> <td>0</td><td>5</td><td>0</td><td>3</td><td>1</td><td>0</td><td>0</td></tr>
+</table>
+</div>
+</div>
+</div></section><section>
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
@@ -1775,7 +1811,7 @@ XkREJMUp2IuIiKQ4BXsREZEU9/8ARSb7LJi3ZwsAAAAASUVORK5CYII=
 </div>
 </div>
 
-</div><div class="fragment" data-fragment-index="37">
+</div><div class="fragment" data-fragment-index="39">
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -1806,7 +1842,7 @@ XkREJMUp2IuIiKQ4BXsREZEU9/8ARSb7LJi3ZwsAAAAASUVORK5CYII=
 </div>
 
 </div>
-    </div><div class="fragment" data-fragment-index="38">
+    </div><div class="fragment" data-fragment-index="40">
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -1866,7 +1902,7 @@ XkREJMUp2IuIiKQ4BXsREZEU9/8ARSb7LJi3ZwsAAAAASUVORK5CYII=
 </div>
 </div>
 
-</div><div class="fragment" data-fragment-index="40">
+</div><div class="fragment" data-fragment-index="42">
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -1923,7 +1959,7 @@ XkREJMUp2IuIiKQ4BXsREZEU9/8ARSb7LJi3ZwsAAAAASUVORK5CYII=
 </div>
 </div>
 
-</div><div class="fragment" data-fragment-index="42">
+</div><div class="fragment" data-fragment-index="44">
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -1955,7 +1991,7 @@ XkREJMUp2IuIiKQ4BXsREZEU9/8ARSb7LJi3ZwsAAAAASUVORK5CYII=
 </div>
 
 </div>
-    </div><div class="fragment" data-fragment-index="43">
+    </div><div class="fragment" data-fragment-index="45">
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -2041,7 +2077,7 @@ XkREJMUp2IuIiKQ4BXsREZEU9/8ARSb7LJi3ZwsAAAAASUVORK5CYII=
 <h1 id="Feature-Values:-boolean,-raw-frequency,-TFIDF">Feature Values: boolean, raw frequency, TFIDF<a class="anchor-link" href="#Feature-Values:-boolean,-raw-frequency,-TFIDF">&#182;</a></h1>
 </div>
 </div>
-</div><div class="fragment" data-fragment-index="46">
+</div><div class="fragment" data-fragment-index="48">
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -2052,7 +2088,7 @@ $$tfidf(t, d, D) = tf(t,d) \times idf(t, D) $$
 </div>
 </div>
 </div>
-    </div><div class="fragment" data-fragment-index="47">
+    </div><div class="fragment" data-fragment-index="49">
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -2115,7 +2151,7 @@ $$idf(t, D) = \log{\frac{N}{|\{d \in D : t \in d\}|}}$$
 </div>
 </div>
 </div>
-    </aside><div class="fragment" data-fragment-index="50">
+    </aside><div class="fragment" data-fragment-index="52">
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -2150,7 +2186,7 @@ $$idf(t, D) = \log{\frac{N}{|\{d \in D : t \in d\}|}}$$
 </div>
 
 </div>
-    </div><div class="fragment" data-fragment-index="51">
+    </div><div class="fragment" data-fragment-index="53">
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -2207,7 +2243,8 @@ $$idf(t, D) = \log{\frac{N}{|\{d \in D : t \in d\}|}}$$
 
 </div>
 </div>
-</div>
+</div><div class="fragment" data-fragment-index="55">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[219]:</div>
@@ -2242,7 +2279,8 @@ $$idf(t, D) = \log{\frac{N}{|\{d \in D : t \in d\}|}}$$
 </div>
 </div>
 
-</div></section>
+</div>
+    </div></section>
     </section><section>
     <section>
     
@@ -2251,14 +2289,21 @@ $$idf(t, D) = \log{\frac{N}{|\{d \in D : t \in d\}|}}$$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Information-Extraction">Information Extraction<a class="anchor-link" href="#Information-Extraction">&#182;</a></h1><h2 id="Named-Entity-Recognition">Named Entity Recognition<a class="anchor-link" href="#Named-Entity-Recognition">&#182;</a></h2>
+<h1 id="Information-Extraction">Information Extraction<a class="anchor-link" href="#Information-Extraction">&#182;</a></h1><h2 id="Named-Entity-Recognition">Named Entity Recognition<a class="anchor-link" href="#Named-Entity-Recognition">&#182;</a></h2><h3 id="Named-entities-are-bits-of-a-sentence-that-correspond-to-some-real-world-thing">Named entities are bits of a sentence that correspond to some real world thing<a class="anchor-link" href="#Named-entities-are-bits-of-a-sentence-that-correspond-to-some-real-world-thing">&#182;</a></h3><ul>
+<li>Organisation</li>
+<li>Geo Political Entity</li>
+<li>Time</li>
+<li>Person</li>
+<li>Location</li>
+</ul>
+
 </div>
 </div>
 </div></section><section>
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[132]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="kn">from</span> <span class="nn">nltk</span> <span class="k">import</span> <span class="n">corpus</span>
@@ -2273,7 +2318,7 @@ $$idf(t, D) = \log{\frac{N}{|\{d \in D : t \in d\}|}}$$
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[132]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[16]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -2285,14 +2330,14 @@ $$idf(t, D) = \log{\frac{N}{|\{d \in D : t \in d\}|}}$$
 </div>
 </div>
 
-</div><div class="fragment" data-fragment-index="56">
+</div></section><section>
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[133]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">corpus</span><span class="o">.</span><span class="n">reuters</span><span class="o">.</span><span class="n">raw</span><span class="p">(</span><span class="n">corpus</span><span class="o">.</span><span class="n">reuters</span><span class="o">.</span><span class="n">fileids</span><span class="p">()[</span><span class="mi">0</span><span class="p">])[:</span><span class="mi">400</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span class="n">corpus</span><span class="o">.</span><span class="n">reuters</span><span class="o">.</span><span class="n">raw</span><span class="p">(</span><span class="n">corpus</span><span class="o">.</span><span class="n">reuters</span><span class="o">.</span><span class="n">fileids</span><span class="p">()[</span><span class="mi">2</span><span class="p">])[:</span><span class="mi">400</span><span class="p">]</span>
 </pre></div>
 
 </div>
@@ -2303,11 +2348,41 @@ $$idf(t, D) = \log{\frac{N}{|\{d \in D : t \in d\}|}}$$
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[133]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[19]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&quot;ASIAN EXPORTERS FEAR DAMAGE FROM U.S.-JAPAN RIFT\n  Mounting trade friction between the\n  U.S. And Japan has raised fears among many of Asia&apos;s exporting\n  nations that the row could inflict far-reaching economic\n  damage, businessmen and officials said.\n      They told Reuter correspondents in Asian capitals a U.S.\n  Move against Japan might boost protectionist sentiment in the\n  U.S. And lead to c&quot;</pre>
+<pre>&apos;JAPAN TO REVISE LONG-TERM ENERGY DEMAND DOWNWARDS\n  The Ministry of International Trade and\n  Industry (MITI) will revise its long-term energy supply/demand\n  outlook by August to meet a forecast downtrend in Japanese\n  energy demand, ministry officials said.\n      MITI is expected to lower the projection for primary energy\n  supplies in the year 2000 to 550 mln kilolitres (kl) from 600\n  mln, the&apos;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div><div class="fragment" data-fragment-index="59">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">corpus</span><span class="o">.</span><span class="n">reuters</span><span class="o">.</span><span class="n">raw</span><span class="p">(</span><span class="n">corpus</span><span class="o">.</span><span class="n">reuters</span><span class="o">.</span><span class="n">fileids</span><span class="p">()[</span><span class="mi">4</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[22]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&quot;INDONESIA SEES CPO PRICE RISING SHARPLY\n  Indonesia expects crude palm oil (CPO)\n  prices to rise sharply to between 450 and 550 dlrs a tonne FOB\n  sometime this year because of better European demand and a fall\n  in Malaysian output, Hasrul Harahap, junior minister for tree\n  crops, told Indonesian reporters.\n      Prices of Malaysian and Sumatran CPO are now around 332\n  dlrs a tonne CIF for delivery in Rotterdam, traders said.\n      Harahap said Indonesia would maintain its exports, despite\n  making recent palm oil purchases from Malaysia, so that it\n  could possibly increase its international market share.\n      Indonesia, the world&apos;s second largest producer of palm oil\n  after Malaysia, has been forced to import palm oil to ensure\n  supplies during the Moslem fasting month of Ramadan.\n      Harahap said it was better to import to cover a temporary\n  shortage than to lose export markets.\n      Indonesian exports of CPO in calendar 1986 were 530,500\n  tonnes, against 468,500 in 1985, according to central bank\n  figures.\n  \n\n&quot;</pre>
 </div>
 
 </div>
@@ -2318,9 +2393,21 @@ $$idf(t, D) = \log{\frac{N}{|\{d \in D : t \in d\}|}}$$
 </div>
     </div></section><section>
     
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>nltk.post_tag</code>
+<code>nltk.ne_chunk</code></p>
+
+</div>
+</div>
+</div><div class="fragment" data-fragment-index="61">
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[169]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">persons</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
@@ -2336,11 +2423,12 @@ $$idf(t, D) = \log{\frac{N}{|\{d \in D : t \in d\}|}}$$
 </div>
 </div>
 
-</div><div class="fragment" data-fragment-index="58">
+</div>
+    </div></section><section>
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[171]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="kn">import</span> <span class="nn">random</span>
@@ -2355,29 +2443,49 @@ $$idf(t, D) = \log{\frac{N}{|\{d \in D : t \in d\}|}}$$
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[171]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[24]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[((&apos;Zhang&apos;, &apos;NNP&apos;), (&apos;Yan&apos;, &apos;NNP&apos;)),
- ((&apos;Mikhail&apos;, &apos;NNP&apos;), (&apos;Gorbachev&apos;, &apos;NNP&apos;)),
- ((&apos;Marty&apos;, &apos;NNP&apos;), (&apos;McNeill&apos;, &apos;NNP&apos;)),
- ((&apos;Tom&apos;, &apos;NNP&apos;), (&apos;Harkin&apos;, &apos;NNP&apos;)),
- ((&apos;Farm&apos;, &apos;NNP&apos;), (&apos;Cooperatives&apos;, &apos;NNP&apos;)),
- ((&apos;Clinton&apos;, &apos;NNP&apos;), (&apos;Condon&apos;, &apos;NNP&apos;)),
+<pre>[((&apos;John&apos;, &apos;NNP&apos;), (&apos;Danforth&apos;, &apos;NNP&apos;)),
+ ((&apos;Treasury&apos;, &apos;NNP&apos;), (&apos;Bond&apos;, &apos;NNP&apos;)),
+ ((&apos;Peter&apos;, &apos;NNP&apos;), (&apos;Baron&apos;, &apos;NNP&apos;)),
+ ((&apos;Zhang&apos;, &apos;NNP&apos;), (&apos;Yan&apos;, &apos;NNP&apos;)),
  ((&apos;Export&apos;, &apos;NNP&apos;), (&apos;Enhancement&apos;, &apos;NNP&apos;)),
- ((&apos;Soybean&apos;, &apos;NNP&apos;), (&apos;Oil&apos;, &apos;NNP&apos;)),
- ((&apos;Nil&apos;, &apos;NNP&apos;), (&apos;Nil&apos;, &apos;NNP&apos;)),
- ((&apos;Grain&apos;, &apos;NNP&apos;), (&apos;Products&apos;, &apos;NNP&apos;), (&apos;Ministry&apos;, &apos;NNP&apos;)),
- ((&apos;Kika&apos;, &apos;NNP&apos;), (&apos;De&apos;, &apos;NNP&apos;)),
- ((&apos;TRADE&apos;, &apos;NNP&apos;), (&apos;BILL&apos;, &apos;NNP&apos;), (&apos;Sen&apos;, &apos;NNP&apos;)),
- ((&apos;Wheat&apos;, &apos;NNP&apos;), (&apos;Growers&apos;, &apos;NNP&apos;)),
- ((&apos;North&apos;, &apos;NNP&apos;), (&apos;Pacific&apos;, &apos;NNP&apos;)),
- ((&apos;Marcel&apos;, &apos;NNP&apos;), (&apos;Cazale&apos;, &apos;NNP&apos;))]</pre>
+ ((&apos;Quaker&apos;, &apos;NNP&apos;), (&apos;Oats&apos;, &apos;NNP&apos;)),
+ ((&apos;Jacques&apos;, &apos;NNP&apos;), (&apos;Chirac&apos;, &apos;NNP&apos;)),
+ ((&apos;Economic&apos;, &apos;NNP&apos;), (&apos;Planning&apos;, &apos;NNP&apos;), (&apos;Agency&apos;, &apos;NNP&apos;)),
+ ((&apos;Rahr&apos;, &apos;NNP&apos;), (&apos;Malting&apos;, &apos;NNP&apos;), (&apos;Co&apos;, &apos;NNP&apos;)),
+ ((&apos;Tom&apos;, &apos;NNP&apos;), (&apos;Mulligan&apos;, &apos;NNP&apos;)),
+ ((&apos;Dante&apos;, &apos;NNP&apos;), (&apos;Caputo&apos;, &apos;NNP&apos;)),
+ ((&apos;Start&apos;, &apos;NNP&apos;), (&apos;Stcks&apos;, &apos;NNP&apos;)),
+ ((&apos;Darwin&apos;, &apos;NNP&apos;), (&apos;E&apos;, &apos;NNP&apos;)),
+ ((&apos;David&apos;, &apos;NNP&apos;), (&apos;Pryor&apos;, &apos;NNP&apos;)),
+ ((&apos;Kika&apos;, &apos;NNP&apos;), (&apos;De&apos;, &apos;NNP&apos;))]</pre>
 </div>
 
 </div>
 
+</div>
+</div>
+
+</div><div class="fragment" data-fragment-index="63">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">persons</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+<span class="n">sents</span> <span class="o">=</span> <span class="n">corpus</span><span class="o">.</span><span class="n">gutenberg</span><span class="o">.</span><span class="n">sents</span><span class="p">(</span><span class="n">fileids</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;bible-kjv.txt&#39;</span><span class="p">])</span>
+<span class="k">for</span> <span class="n">sent</span> <span class="ow">in</span> <span class="n">sents</span><span class="p">:</span>
+    <span class="n">chunks</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">ne_chunk</span><span class="p">(</span><span class="n">nltk</span><span class="o">.</span><span class="n">pos_tag</span><span class="p">(</span><span class="n">sent</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="n">chunks</span><span class="o">.</span><span class="n">subtrees</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">chunk</span><span class="o">.</span><span class="n">label</span><span class="p">()</span> <span class="o">==</span> <span class="s">&#39;PERSON&#39;</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">chunk</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">persons</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="nb">tuple</span><span class="p">(</span><span class="n">chunk</span><span class="o">.</span><span class="n">leaves</span><span class="p">()))</span>
+</pre></div>
+
+</div>
 </div>
 </div>
 
@@ -2386,7 +2494,52 @@ $$idf(t, D) = \log{\frac{N}{|\{d \in D : t \in d\}|}}$$
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[144]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="kn">import</span> <span class="nn">random</span>
+<span class="nb">list</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">persons</span><span class="p">),</span> <span class="n">k</span><span class="o">=</span><span class="mi">15</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[33]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[((&apos;Tyrus&apos;, &apos;NNP&apos;), (&apos;Nebuchadrezzar&apos;, &apos;NNP&apos;)),
+ ((&apos;Eden&apos;, &apos;NNP&apos;), (&apos;Cherubims&apos;, &apos;NNP&apos;)),
+ ((&apos;Saint&apos;, &apos;NNP&apos;), (&apos;Matthew&apos;, &apos;NNP&apos;)),
+ ((&apos;Simon&apos;, &apos;NNP&apos;), (&apos;Peter&apos;, &apos;NNP&apos;)),
+ ((&apos;Assuredly&apos;, &apos;NNP&apos;), (&apos;Solomon&apos;, &apos;NNP&apos;)),
+ ((&apos;Curse&apos;, &apos;NNP&apos;), (&apos;David&apos;, &apos;NNP&apos;)),
+ ((&apos;Anathema&apos;, &apos;NNP&apos;), (&apos;Maranatha&apos;, &apos;NNP&apos;)),
+ ((&apos;Eglah&apos;, &apos;NNP&apos;), (&apos;David&apos;, &apos;NNP&apos;)),
+ ((&apos;Hushai&apos;, &apos;NNP&apos;), (&apos;David&apos;, &apos;NNP&apos;)),
+ ((&apos;Wherein&apos;, &apos;NNP&apos;), (&apos;God&apos;, &apos;NNP&apos;)),
+ ((&apos;O&apos;, &apos;NNP&apos;), (&apos;Solomon&apos;, &apos;NNP&apos;)),
+ ((&apos;James&apos;, &apos;NNP&apos;), (&apos;Bible&apos;, &apos;NNP&apos;)),
+ ((&apos;Our&apos;, &apos;NNP&apos;), (&apos;Father&apos;, &apos;NNP&apos;)),
+ ((&apos;Shimea&apos;, &apos;NNP&apos;), (&apos;David&apos;, &apos;NNP&apos;)),
+ ((&apos;O&apos;, &apos;NNP&apos;), (&apos;Satan&apos;, &apos;NNP&apos;))]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="kn">import</span> <span class="nn">pprint</span>
@@ -2493,6 +2646,16 @@ $$idf(t, D) = \log{\frac{N}{|\{d \in D : t \in d\}|}}$$
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Stanford-NER">Stanford NER<a class="anchor-link" href="#Stanford-NER">&#182;</a></h4><p><a href="http://nlp.stanford.edu/software/CRF-NER.shtml">http://nlp.stanford.edu/software/CRF-NER.shtml</a></p>
+
+</div>
+</div>
 </div></section>
     </section><section>
     <section>
@@ -2518,56 +2681,26 @@ $$idf(t, D) = \log{\frac{N}{|\{d \in D : t \in d\}|}}$$
 <div class=" highlight hl-ipython3"><pre><span class="kn">import</span> <span class="nn">nltk</span>
 <span class="kn">import</span> <span class="nn">os</span>
 
+<span class="c"># load the example model from http://www.maltparser.org/mco/mco.html</span>
 <span class="n">mp_home</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s">&#39;~/Documents/PUB_NLP/maltparser-1.7.2/&#39;</span><span class="p">)</span>
 <span class="n">mp_model</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s">&#39;~/Documents/PUB_NLP/maltparser-1.7.2/models/engmalt.poly-1.7.mco&#39;</span><span class="p">)</span>
 <span class="n">mp</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">parse</span><span class="o">.</span><span class="n">malt</span><span class="o">.</span><span class="n">MaltParser</span><span class="p">(</span><span class="n">mp_home</span><span class="p">,</span> <span class="n">mp_model</span><span class="p">)</span>
+
+<span class="c"># other models exist http://nlp.stanford.edu/software/stanford-dependencies.shtml</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-</div></section><section>
+</div><div class="fragment" data-fragment-index="70">
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[129]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">dep_tree</span> <span class="o">=</span> <span class="n">mp</span><span class="o">.</span><span class="n">parse_tagged_sents</span><span class="p">([</span><span class="n">nltk</span><span class="o">.</span><span class="n">pos_tag</span><span class="p">(</span><span class="s">&#39;the yellow fish that swims in the sea&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">())])</span>
-<span class="n">graph</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="nb">iter</span><span class="p">(</span><span class="n">dep_tree</span><span class="p">)))</span>
-<span class="n">graph</span><span class="o">.</span><span class="n">tree</span><span class="p">()</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">Out[129]:</div>
-
-
-<div class="output_png output_subarea output_execute_result">
-<img src="data:image/png;base64,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"
->
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[121]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">dep_tree</span> <span class="o">=</span> <span class="n">mp</span><span class="o">.</span><span class="n">parse_tagged_sents</span><span class="p">([</span><span class="n">nltk</span><span class="o">.</span><span class="n">pos_tag</span><span class="p">(</span><span class="s">&#39;I thought Tom Hanks was fantastic&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">())])</span>
+<div class=" highlight hl-ipython3"><pre><span class="n">dep_tree</span> <span class="o">=</span> <span class="n">mp</span><span class="o">.</span><span class="n">parse_tagged_sents</span><span class="p">([</span><span class="n">nltk</span><span class="o">.</span><span class="n">pos_tag</span><span class="p">(</span><span class="s">&#39;The yellow fish that swims in the sea.&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">())])</span>
 <span class="n">graph</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="nb">iter</span><span class="p">(</span><span class="n">dep_tree</span><span class="p">)))</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">graph</span><span class="o">.</span><span class="n">to_conll</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="mi">4</span><span class="p">))</span>
 </pre></div>
@@ -2576,34 +2709,15 @@ $$idf(t, D) = \log{\frac{N}{|\{d \in D : t \in d\}|}}$$
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>I	PRP	2	nsubj
-thought	VBD	0	ROOT
-Tom	NNP	4	nn
-Hanks	NNP	6	nsubj
-was	VBD	6	cop
-fantastic	JJ	2	ccomp
-
-</pre>
 </div>
-</div>
-
-</div>
-</div>
-
-</div></section><section>
+    </div></section><section>
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[122]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">graph</span><span class="o">.</span><span class="n">tree</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span class="n">graph</span>
 </pre></div>
 
 </div>
@@ -2614,12 +2728,107 @@ fantastic	JJ	2	ccomp
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[122]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[11]:</div>
 
+<div class="output_svg output_subarea output_execute_result">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.38.0 (20140413.2041)
+ -->
+<!-- Title: G Pages: 1 -->
+<svg width="276pt" height="488pt"
+ viewBox="0.00 0.00 276.00 488.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 484)">
+<title>G</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-484 272,-484 272,4 -4,4"/>
+<!-- 0 -->
+<g id="node1" class="node"><title>0</title>
+<text text-anchor="middle" x="109" y="-457.8" font-family="Times,serif" font-size="14.00">0 (None)</text>
+</g>
+<!-- 3 -->
+<g id="node2" class="node"><title>3</title>
+<text text-anchor="middle" x="109" y="-369" font-family="Times,serif" font-size="14.00">3 (fish)</text>
+</g>
+<!-- 0&#45;&gt;3 -->
+<g id="edge1" class="edge"><title>0&#45;&gt;3</title>
+<path fill="none" stroke="black" d="M109,-443.851C109,-431.725 109,-415.219 109,-401.319"/>
+<polygon fill="black" stroke="black" points="112.5,-401.313 109,-391.313 105.5,-401.313 112.5,-401.313"/>
+<text text-anchor="middle" x="119.891" y="-413.4" font-family="Times,serif" font-size="14.00">null</text>
+</g>
+<!-- 1 -->
+<g id="node3" class="node"><title>1</title>
+<text text-anchor="middle" x="27" y="-280.2" font-family="Times,serif" font-size="14.00">1 (the)</text>
+</g>
+<!-- 3&#45;&gt;1 -->
+<g id="edge3" class="edge"><title>3&#45;&gt;1</title>
+<path fill="none" stroke="black" d="M92.7994,-355.051C80.6699,-342.212 63.9019,-324.462 50.329,-310.095"/>
+<polygon fill="black" stroke="black" points="52.5784,-307.379 43.1669,-302.513 47.4899,-312.186 52.5784,-307.379"/>
+<text text-anchor="middle" x="84.5526" y="-324.6" font-family="Times,serif" font-size="14.00">det</text>
+</g>
+<!-- 2 -->
+<g id="node4" class="node"><title>2</title>
+<text text-anchor="middle" x="109" y="-280.2" font-family="Times,serif" font-size="14.00">2 (yellow)</text>
+</g>
+<!-- 3&#45;&gt;2 -->
+<g id="edge2" class="edge"><title>3&#45;&gt;2</title>
+<path fill="none" stroke="black" d="M109,-355.051C109,-342.925 109,-326.419 109,-312.519"/>
+<polygon fill="black" stroke="black" points="112.5,-312.513 109,-302.513 105.5,-312.513 112.5,-312.513"/>
+<text text-anchor="middle" x="124.553" y="-324.6" font-family="Times,serif" font-size="14.00">amod</text>
+</g>
+<!-- 5 -->
+<g id="node5" class="node"><title>5</title>
+<text text-anchor="middle" x="200" y="-280.2" font-family="Times,serif" font-size="14.00">5 (swims)</text>
+</g>
+<!-- 3&#45;&gt;5 -->
+<g id="edge4" class="edge"><title>3&#45;&gt;5</title>
+<path fill="none" stroke="black" d="M126.979,-355.051C140.564,-342.093 159.393,-324.133 174.528,-309.696"/>
+<polygon fill="black" stroke="black" points="177.238,-311.948 182.059,-302.513 172.407,-306.883 177.238,-311.948"/>
+<text text-anchor="middle" x="179.883" y="-324.6" font-family="Times,serif" font-size="14.00">rcmod</text>
+</g>
+<!-- 4 -->
+<g id="node6" class="node"><title>4</title>
+<text text-anchor="middle" x="168" y="-191.4" font-family="Times,serif" font-size="14.00">4 (that)</text>
+</g>
+<!-- 5&#45;&gt;4 -->
+<g id="edge5" class="edge"><title>5&#45;&gt;4</title>
+<path fill="none" stroke="black" d="M187.905,-266.212C184.495,-260.725 181.064,-254.491 178.665,-248.4 175.623,-240.678 173.4,-231.951 171.796,-223.892"/>
+<polygon fill="black" stroke="black" points="175.205,-223.066 170.028,-213.822 168.31,-224.277 175.205,-223.066"/>
+<text text-anchor="middle" x="193.168" y="-235.8" font-family="Times,serif" font-size="14.00">nsubj</text>
+</g>
+<!-- 6 -->
+<g id="node7" class="node"><title>6</title>
+<text text-anchor="middle" x="241" y="-191.4" font-family="Times,serif" font-size="14.00">6 (in)</text>
+</g>
+<!-- 5&#45;&gt;6 -->
+<g id="edge6" class="edge"><title>5&#45;&gt;6</title>
+<path fill="none" stroke="black" d="M208.1,-266.251C213.94,-253.887 221.931,-236.97 228.575,-222.904"/>
+<polygon fill="black" stroke="black" points="231.81,-224.25 232.917,-213.713 225.481,-221.26 231.81,-224.25"/>
+<text text-anchor="middle" x="236.438" y="-235.8" font-family="Times,serif" font-size="14.00">prep</text>
+</g>
+<!-- 8 -->
+<g id="node8" class="node"><title>8</title>
+<text text-anchor="middle" x="241" y="-102.6" font-family="Times,serif" font-size="14.00">8 (sea)</text>
+</g>
+<!-- 6&#45;&gt;8 -->
+<g id="edge7" class="edge"><title>6&#45;&gt;8</title>
+<path fill="none" stroke="black" d="M241,-177.451C241,-165.325 241,-148.819 241,-134.919"/>
+<polygon fill="black" stroke="black" points="244.5,-134.913 241,-124.913 237.5,-134.913 244.5,-134.913"/>
+<text text-anchor="middle" x="253.445" y="-147" font-family="Times,serif" font-size="14.00">pobj</text>
+</g>
+<!-- 7 -->
+<g id="node9" class="node"><title>7</title>
+<text text-anchor="middle" x="241" y="-13.8" font-family="Times,serif" font-size="14.00">7 (the)</text>
+</g>
+<!-- 8&#45;&gt;7 -->
+<g id="edge8" class="edge"><title>8&#45;&gt;7</title>
+<path fill="none" stroke="black" d="M241,-88.6511C241,-76.5249 241,-60.019 241,-46.119"/>
+<polygon fill="black" stroke="black" points="244.5,-46.1132 241,-36.1133 237.5,-46.1133 244.5,-46.1132"/>
+<text text-anchor="middle" x="249.553" y="-58.2" font-family="Times,serif" font-size="14.00">det</text>
+</g>
+</g>
+</svg>
 
-<div class="output_png output_subarea output_execute_result">
-<img src="data:image/png;base64,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"
->
 </div>
 
 </div>
@@ -2631,7 +2840,115 @@ fantastic	JJ	2	ccomp
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[96]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">dep_tree</span> <span class="o">=</span> <span class="n">mp</span><span class="o">.</span><span class="n">parse_tagged_sents</span><span class="p">([</span><span class="n">nltk</span><span class="o">.</span><span class="n">pos_tag</span><span class="p">(</span><span class="s">&#39;I thought Tom Hanks was fantastic&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">())])</span>
+<span class="n">graph</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="nb">iter</span><span class="p">(</span><span class="n">dep_tree</span><span class="p">)))</span>
+<span class="n">graph</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[12]:</div>
+
+<div class="output_svg output_subarea output_execute_result">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.38.0 (20140413.2041)
+ -->
+<!-- Title: G Pages: 1 -->
+<svg width="185pt" height="399pt"
+ viewBox="0.00 0.00 184.79 399.20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 395.2)">
+<title>G</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-395.2 180.793,-395.2 180.793,4 -4,4"/>
+<!-- 0 -->
+<g id="node1" class="node"><title>0</title>
+<text text-anchor="middle" x="62" y="-369" font-family="Times,serif" font-size="14.00">0 (None)</text>
+</g>
+<!-- 2 -->
+<g id="node2" class="node"><title>2</title>
+<text text-anchor="middle" x="62" y="-280.2" font-family="Times,serif" font-size="14.00">2 (thought)</text>
+</g>
+<!-- 0&#45;&gt;2 -->
+<g id="edge1" class="edge"><title>0&#45;&gt;2</title>
+<path fill="none" stroke="black" d="M62,-355.051C62,-342.925 62,-326.419 62,-312.519"/>
+<polygon fill="black" stroke="black" points="65.5001,-312.513 62,-302.513 58.5001,-312.513 65.5001,-312.513"/>
+<text text-anchor="middle" x="72.8906" y="-324.6" font-family="Times,serif" font-size="14.00">null</text>
+</g>
+<!-- 1 -->
+<g id="node3" class="node"><title>1</title>
+<text text-anchor="middle" x="27" y="-191.4" font-family="Times,serif" font-size="14.00">1 (I)</text>
+</g>
+<!-- 2&#45;&gt;1 -->
+<g id="edge2" class="edge"><title>2&#45;&gt;1</title>
+<path fill="none" stroke="black" d="M52.9016,-266.161C50.1008,-260.567 47.1132,-254.285 44.6648,-248.4 41.3286,-240.381 38.1228,-231.485 35.3795,-223.36"/>
+<polygon fill="black" stroke="black" points="38.6217,-222.014 32.1772,-213.605 31.9709,-224.198 38.6217,-222.014"/>
+<text text-anchor="middle" x="60.1676" y="-235.8" font-family="Times,serif" font-size="14.00">nsubj</text>
+</g>
+<!-- 6 -->
+<g id="node4" class="node"><title>6</title>
+<text text-anchor="middle" x="114" y="-191.4" font-family="Times,serif" font-size="14.00">6 (fantastic)</text>
+</g>
+<!-- 2&#45;&gt;6 -->
+<g id="edge3" class="edge"><title>2&#45;&gt;6</title>
+<path fill="none" stroke="black" d="M72.2735,-266.251C79.7518,-253.768 90.0103,-236.644 98.4842,-222.5"/>
+<polygon fill="black" stroke="black" points="101.611,-224.09 103.748,-213.713 95.6062,-220.493 101.611,-224.09"/>
+<text text-anchor="middle" x="111.66" y="-235.8" font-family="Times,serif" font-size="14.00">ccomp</text>
+</g>
+<!-- 4 -->
+<g id="node6" class="node"><title>4</title>
+<text text-anchor="middle" x="65" y="-102.6" font-family="Times,serif" font-size="14.00">4 (Hanks)</text>
+</g>
+<!-- 6&#45;&gt;4 -->
+<g id="edge5" class="edge"><title>6&#45;&gt;4</title>
+<path fill="none" stroke="black" d="M103.168,-177.269C99.7406,-171.67 95.9827,-165.409 92.6648,-159.6 88.0125,-151.455 83.1312,-142.475 78.7862,-134.311"/>
+<polygon fill="black" stroke="black" points="81.7412,-132.411 73.9779,-125.201 75.5506,-135.679 81.7412,-132.411"/>
+<text text-anchor="middle" x="108.168" y="-147" font-family="Times,serif" font-size="14.00">nsubj</text>
+</g>
+<!-- 5 -->
+<g id="node7" class="node"><title>5</title>
+<text text-anchor="middle" x="148" y="-102.6" font-family="Times,serif" font-size="14.00">5 (was)</text>
+</g>
+<!-- 6&#45;&gt;5 -->
+<g id="edge6" class="edge"><title>6&#45;&gt;5</title>
+<path fill="none" stroke="black" d="M120.717,-177.451C125.514,-165.206 132.06,-148.495 137.537,-134.511"/>
+<polygon fill="black" stroke="black" points="140.908,-135.501 141.297,-124.913 134.39,-132.948 140.908,-135.501"/>
+<text text-anchor="middle" x="144.107" y="-147" font-family="Times,serif" font-size="14.00">cop</text>
+</g>
+<!-- 3 -->
+<g id="node5" class="node"><title>3</title>
+<text text-anchor="middle" x="65" y="-13.8" font-family="Times,serif" font-size="14.00">3 (Tom)</text>
+</g>
+<!-- 4&#45;&gt;3 -->
+<g id="edge4" class="edge"><title>4&#45;&gt;3</title>
+<path fill="none" stroke="black" d="M65,-88.6511C65,-76.5249 65,-60.019 65,-46.119"/>
+<polygon fill="black" stroke="black" points="68.5001,-46.1132 65,-36.1133 61.5001,-46.1133 68.5001,-46.1132"/>
+<text text-anchor="middle" x="72" y="-58.2" font-family="Times,serif" font-size="14.00">nn</text>
+</g>
+</g>
+</svg>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="nb">dict</span><span class="p">(</span><span class="n">graph</span><span class="o">.</span><span class="n">nodes</span><span class="p">)</span>
@@ -2645,17 +2962,17 @@ fantastic	JJ	2	ccomp
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[96]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[14]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
 <pre>{0: {&apos;address&apos;: 0,
   &apos;ctag&apos;: &apos;TOP&apos;,
-  &apos;deps&apos;: defaultdict(list, {&apos;ROOT&apos;: [2]}),
+  &apos;deps&apos;: defaultdict(list, {&apos;null&apos;: [2]}),
   &apos;feats&apos;: None,
   &apos;head&apos;: None,
   &apos;lemma&apos;: None,
-  &apos;rel&apos;: &apos;TOP&apos;,
+  &apos;rel&apos;: None,
   &apos;tag&apos;: &apos;TOP&apos;,
   &apos;word&apos;: None},
  1: {&apos;address&apos;: 1,
@@ -2673,7 +2990,7 @@ fantastic	JJ	2	ccomp
   &apos;feats&apos;: &apos;_&apos;,
   &apos;head&apos;: 0,
   &apos;lemma&apos;: &apos;_&apos;,
-  &apos;rel&apos;: &apos;ROOT&apos;,
+  &apos;rel&apos;: &apos;null&apos;,
   &apos;tag&apos;: &apos;VBD&apos;,
   &apos;word&apos;: &apos;thought&apos;},
  3: {&apos;address&apos;: 3,
@@ -2780,12 +3097,12 @@ fantastic	JJ	2	ccomp
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[123]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">dep_tree</span> <span class="o">=</span> <span class="n">mp</span><span class="o">.</span><span class="n">parse_tagged_sents</span><span class="p">([</span><span class="n">nltk</span><span class="o">.</span><span class="n">pos_tag</span><span class="p">(</span><span class="s">&#39;I think Tom Hanks is fantastic&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">())])</span>
 <span class="n">graph</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="nb">iter</span><span class="p">(</span><span class="n">dep_tree</span><span class="p">)))</span>
-<span class="n">graph</span><span class="o">.</span><span class="n">tree</span><span class="p">()</span>
+<span class="n">graph</span>
 </pre></div>
 
 </div>
@@ -2796,12 +3113,87 @@ fantastic	JJ	2	ccomp
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[123]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[28]:</div>
 
+<div class="output_svg output_subarea output_execute_result">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.38.0 (20140413.2041)
+ -->
+<!-- Title: G Pages: 1 -->
+<svg width="182pt" height="399pt"
+ viewBox="0.00 0.00 182.00 399.20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 395.2)">
+<title>G</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-395.2 178,-395.2 178,4 -4,4"/>
+<!-- 0 -->
+<g id="node1" class="node"><title>0</title>
+<text text-anchor="middle" x="62" y="-369" font-family="Times,serif" font-size="14.00">0 (None)</text>
+</g>
+<!-- 2 -->
+<g id="node2" class="node"><title>2</title>
+<text text-anchor="middle" x="62" y="-280.2" font-family="Times,serif" font-size="14.00">2 (think)</text>
+</g>
+<!-- 0&#45;&gt;2 -->
+<g id="edge1" class="edge"><title>0&#45;&gt;2</title>
+<path fill="none" stroke="black" d="M62,-355.051C62,-342.925 62,-326.419 62,-312.519"/>
+<polygon fill="black" stroke="black" points="65.5001,-312.513 62,-302.513 58.5001,-312.513 65.5001,-312.513"/>
+<text text-anchor="middle" x="72.8906" y="-324.6" font-family="Times,serif" font-size="14.00">null</text>
+</g>
+<!-- 1 -->
+<g id="node3" class="node"><title>1</title>
+<text text-anchor="middle" x="27" y="-191.4" font-family="Times,serif" font-size="14.00">1 (I)</text>
+</g>
+<!-- 2&#45;&gt;1 -->
+<g id="edge2" class="edge"><title>2&#45;&gt;1</title>
+<path fill="none" stroke="black" d="M52.9016,-266.161C50.1008,-260.567 47.1132,-254.285 44.6648,-248.4 41.3286,-240.381 38.1228,-231.485 35.3795,-223.36"/>
+<polygon fill="black" stroke="black" points="38.6217,-222.014 32.1772,-213.605 31.9709,-224.198 38.6217,-222.014"/>
+<text text-anchor="middle" x="60.1676" y="-235.8" font-family="Times,serif" font-size="14.00">nsubj</text>
+</g>
+<!-- 6 -->
+<g id="node4" class="node"><title>6</title>
+<text text-anchor="middle" x="114" y="-191.4" font-family="Times,serif" font-size="14.00">6 (fantastic)</text>
+</g>
+<!-- 2&#45;&gt;6 -->
+<g id="edge3" class="edge"><title>2&#45;&gt;6</title>
+<path fill="none" stroke="black" d="M72.2735,-266.251C79.7518,-253.768 90.0103,-236.644 98.4842,-222.5"/>
+<polygon fill="black" stroke="black" points="101.611,-224.09 103.748,-213.713 95.6062,-220.493 101.611,-224.09"/>
+<text text-anchor="middle" x="111.66" y="-235.8" font-family="Times,serif" font-size="14.00">ccomp</text>
+</g>
+<!-- 4 -->
+<g id="node6" class="node"><title>4</title>
+<text text-anchor="middle" x="66" y="-102.6" font-family="Times,serif" font-size="14.00">4 (Hanks)</text>
+</g>
+<!-- 6&#45;&gt;4 -->
+<g id="edge5" class="edge"><title>6&#45;&gt;4</title>
+<path fill="none" stroke="black" d="M103.115,-177.299C99.6848,-171.702 95.9386,-165.433 92.6648,-159.6 88.1106,-151.485 83.386,-142.513 79.2016,-134.347"/>
+<polygon fill="black" stroke="black" points="82.224,-132.569 74.5802,-125.232 75.9806,-135.734 82.224,-132.569"/>
+<text text-anchor="middle" x="108.168" y="-147" font-family="Times,serif" font-size="14.00">nsubj</text>
+</g>
+<!-- 5 -->
+<g id="node7" class="node"><title>5</title>
+<text text-anchor="middle" x="147" y="-102.6" font-family="Times,serif" font-size="14.00">5 (is)</text>
+</g>
+<!-- 6&#45;&gt;5 -->
+<g id="edge6" class="edge"><title>6&#45;&gt;5</title>
+<path fill="none" stroke="black" d="M120.52,-177.451C125.175,-165.206 131.528,-148.495 136.845,-134.511"/>
+<polygon fill="black" stroke="black" points="140.212,-135.504 140.494,-124.913 133.669,-133.017 140.212,-135.504"/>
+<text text-anchor="middle" x="143.107" y="-147" font-family="Times,serif" font-size="14.00">cop</text>
+</g>
+<!-- 3 -->
+<g id="node5" class="node"><title>3</title>
+<text text-anchor="middle" x="66" y="-13.8" font-family="Times,serif" font-size="14.00">3 (Tom)</text>
+</g>
+<!-- 4&#45;&gt;3 -->
+<g id="edge4" class="edge"><title>4&#45;&gt;3</title>
+<path fill="none" stroke="black" d="M66,-88.6511C66,-76.5249 66,-60.019 66,-46.119"/>
+<polygon fill="black" stroke="black" points="69.5001,-46.1132 66,-36.1133 62.5001,-46.1133 69.5001,-46.1132"/>
+<text text-anchor="middle" x="73" y="-58.2" font-family="Times,serif" font-size="14.00">nn</text>
+</g>
+</g>
+</svg>
 
-<div class="output_png output_subarea output_execute_result">
-<img src="data:image/png;base64,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"
->
 </div>
 
 </div>
@@ -2813,12 +3205,12 @@ fantastic	JJ	2	ccomp
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[128]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">dep_tree</span> <span class="o">=</span> <span class="n">mp</span><span class="o">.</span><span class="n">parse_tagged_sents</span><span class="p">([</span><span class="n">nltk</span><span class="o">.</span><span class="n">pos_tag</span><span class="p">(</span><span class="s">&#39;The fantastic Tom Hanks does the performance of a lifetime.&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">())])</span>
 <span class="n">graph</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="nb">iter</span><span class="p">(</span><span class="n">dep_tree</span><span class="p">)))</span>
-<span class="n">graph</span><span class="o">.</span><span class="n">tree</span><span class="p">()</span>
+<span class="n">graph</span>
 </pre></div>
 
 </div>
@@ -2829,12 +3221,127 @@ fantastic	JJ	2	ccomp
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[128]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[29]:</div>
 
+<div class="output_svg output_subarea output_execute_result">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.38.0 (20140413.2041)
+ -->
+<!-- Title: G Pages: 1 -->
+<svg width="385pt" height="577pt"
+ viewBox="0.00 0.00 384.73 576.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 572.8)">
+<title>G</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-572.8 380.726,-572.8 380.726,4 -4,4"/>
+<!-- 0 -->
+<g id="node1" class="node"><title>0</title>
+<text text-anchor="middle" x="161.794" y="-546.6" font-family="Times,serif" font-size="14.00">0 (None)</text>
+</g>
+<!-- 4 -->
+<g id="node2" class="node"><title>4</title>
+<text text-anchor="middle" x="161.794" y="-457.8" font-family="Times,serif" font-size="14.00">4 (Hanks)</text>
+</g>
+<!-- 0&#45;&gt;4 -->
+<g id="edge1" class="edge"><title>0&#45;&gt;4</title>
+<path fill="none" stroke="black" d="M161.794,-532.651C161.794,-520.525 161.794,-504.019 161.794,-490.119"/>
+<polygon fill="black" stroke="black" points="165.294,-490.113 161.794,-480.113 158.294,-490.113 165.294,-490.113"/>
+<text text-anchor="middle" x="172.685" y="-502.2" font-family="Times,serif" font-size="14.00">null</text>
+</g>
+<!-- 1 -->
+<g id="node3" class="node"><title>1</title>
+<text text-anchor="middle" x="28.7942" y="-369" font-family="Times,serif" font-size="14.00">1 (The)</text>
+</g>
+<!-- 4&#45;&gt;1 -->
+<g id="edge3" class="edge"><title>4&#45;&gt;1</title>
+<path fill="none" stroke="black" d="M135.518,-443.851C114.933,-430.417 86.1129,-411.608 63.6096,-396.922"/>
+<polygon fill="black" stroke="black" points="65.3034,-393.848 55.0161,-391.313 61.4776,-399.71 65.3034,-393.848"/>
+<text text-anchor="middle" x="116.347" y="-413.4" font-family="Times,serif" font-size="14.00">det</text>
+</g>
+<!-- 2 -->
+<g id="node4" class="node"><title>2</title>
+<text text-anchor="middle" x="116.794" y="-369" font-family="Times,serif" font-size="14.00">2 (fantastic)</text>
+</g>
+<!-- 4&#45;&gt;2 -->
+<g id="edge2" class="edge"><title>4&#45;&gt;2</title>
+<path fill="none" stroke="black" d="M152.904,-443.851C146.494,-431.487 137.723,-414.57 130.431,-400.504"/>
+<polygon fill="black" stroke="black" points="133.376,-398.58 125.666,-391.313 127.162,-401.802 133.376,-398.58"/>
+<text text-anchor="middle" x="158.347" y="-413.4" font-family="Times,serif" font-size="14.00">amod</text>
+</g>
+<!-- 3 -->
+<g id="node5" class="node"><title>3</title>
+<text text-anchor="middle" x="207.794" y="-369" font-family="Times,serif" font-size="14.00">3 (Tom)</text>
+</g>
+<!-- 4&#45;&gt;3 -->
+<g id="edge4" class="edge"><title>4&#45;&gt;3</title>
+<path fill="none" stroke="black" d="M170.882,-443.851C177.435,-431.487 186.4,-414.57 193.854,-400.504"/>
+<polygon fill="black" stroke="black" points="197.135,-401.788 198.725,-391.313 190.95,-398.51 197.135,-401.788"/>
+<text text-anchor="middle" x="195.794" y="-413.4" font-family="Times,serif" font-size="14.00">nn</text>
+</g>
+<!-- 5 -->
+<g id="node6" class="node"><title>5</title>
+<text text-anchor="middle" x="287.794" y="-369" font-family="Times,serif" font-size="14.00">5 (does)</text>
+</g>
+<!-- 4&#45;&gt;5 -->
+<g id="edge5" class="edge"><title>4&#45;&gt;5</title>
+<path fill="none" stroke="black" d="M186.688,-443.851C206.102,-430.477 233.251,-411.774 254.528,-397.117"/>
+<polygon fill="black" stroke="black" points="256.703,-399.869 262.952,-391.313 252.732,-394.104 256.703,-399.869"/>
+<text text-anchor="middle" x="245.901" y="-413.4" font-family="Times,serif" font-size="14.00">dep</text>
+</g>
+<!-- 7 -->
+<g id="node7" class="node"><title>7</title>
+<text text-anchor="middle" x="287.794" y="-280.2" font-family="Times,serif" font-size="14.00">7 (performance)</text>
+</g>
+<!-- 5&#45;&gt;7 -->
+<g id="edge6" class="edge"><title>5&#45;&gt;7</title>
+<path fill="none" stroke="black" d="M287.794,-355.051C287.794,-342.925 287.794,-326.419 287.794,-312.519"/>
+<polygon fill="black" stroke="black" points="291.294,-312.513 287.794,-302.513 284.294,-312.513 291.294,-312.513"/>
+<text text-anchor="middle" x="300.24" y="-324.6" font-family="Times,serif" font-size="14.00">dobj</text>
+</g>
+<!-- 6 -->
+<g id="node8" class="node"><title>6</title>
+<text text-anchor="middle" x="259.794" y="-191.4" font-family="Times,serif" font-size="14.00">6 (the)</text>
+</g>
+<!-- 7&#45;&gt;6 -->
+<g id="edge7" class="edge"><title>7&#45;&gt;6</title>
+<path fill="none" stroke="black" d="M282.262,-266.251C278.312,-254.006 272.922,-237.295 268.411,-223.311"/>
+<polygon fill="black" stroke="black" points="271.716,-222.156 265.315,-213.713 265.054,-224.305 271.716,-222.156"/>
+<text text-anchor="middle" x="284.347" y="-235.8" font-family="Times,serif" font-size="14.00">det</text>
+</g>
+<!-- 8 -->
+<g id="node9" class="node"><title>8</title>
+<text text-anchor="middle" x="331.794" y="-191.4" font-family="Times,serif" font-size="14.00">8 (of)</text>
+</g>
+<!-- 7&#45;&gt;8 -->
+<g id="edge8" class="edge"><title>7&#45;&gt;8</title>
+<path fill="none" stroke="black" d="M296.487,-266.251C302.755,-253.887 311.33,-236.97 318.46,-222.904"/>
+<polygon fill="black" stroke="black" points="321.72,-224.215 323.119,-213.713 315.476,-221.05 321.72,-224.215"/>
+<text text-anchor="middle" x="325.232" y="-235.8" font-family="Times,serif" font-size="14.00">prep</text>
+</g>
+<!-- 10 -->
+<g id="node10" class="node"><title>10</title>
+<text text-anchor="middle" x="331.794" y="-102.6" font-family="Times,serif" font-size="14.00">10 (lifetime.)</text>
+</g>
+<!-- 8&#45;&gt;10 -->
+<g id="edge9" class="edge"><title>8&#45;&gt;10</title>
+<path fill="none" stroke="black" d="M331.794,-177.451C331.794,-165.325 331.794,-148.819 331.794,-134.919"/>
+<polygon fill="black" stroke="black" points="335.294,-134.913 331.794,-124.913 328.294,-134.913 335.294,-134.913"/>
+<text text-anchor="middle" x="344.24" y="-147" font-family="Times,serif" font-size="14.00">pobj</text>
+</g>
+<!-- 9 -->
+<g id="node11" class="node"><title>9</title>
+<text text-anchor="middle" x="331.794" y="-13.8" font-family="Times,serif" font-size="14.00">9 (a)</text>
+</g>
+<!-- 10&#45;&gt;9 -->
+<g id="edge10" class="edge"><title>10&#45;&gt;9</title>
+<path fill="none" stroke="black" d="M331.794,-88.6511C331.794,-76.5249 331.794,-60.019 331.794,-46.119"/>
+<polygon fill="black" stroke="black" points="335.294,-46.1132 331.794,-36.1133 328.294,-46.1133 335.294,-46.1132"/>
+<text text-anchor="middle" x="340.347" y="-58.2" font-family="Times,serif" font-size="14.00">det</text>
+</g>
+</g>
+</svg>
 
-<div class="output_png output_subarea output_execute_result">
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASgAAADaCAIAAACaSEjoAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAHXRFWHRTb2Z0d2FyZQBHUEwgR2hvc3RzY3JpcHQgOS4xNnO9PXQAABMVSURBVHic7d2/j9vI2QfwOedtYgMv3jGw7oIs+DaBjbfiuU2uGDV77VHtBXgBEsgfELJL0pFA/gGyilvx2nOjKW67AOE0L+Ct4skuAqTwApo03nbf4vGOx5TE1Q+KQ+1+P4UhidJwJPGrGQ3lfb66vb1lADCsJ747APAYIXgAHiB4AB4geAAeIHhraa2llEopuiqllFIaY/ZsNsuy6XS6d+/guCF4a0kpkySp65rdhTBJEpvDneV5vn964dh9hdMJHSaTyXw+X3e1r2bhEfoP3x04YlmWaa2NMZzzIAjyPLebptNpEARBENCASVs5560WptMpPXw2m9kblVJZljHGqFnGmNsyPBC3sJ4QouPqYrGwl/M8L8vS3co5t7c0TRPHcaudxWIRRVHTNK2dhmFoW26aprVTeBgw4nXRWtPgsxLn3BijlAqCIAxDKaW7NQzDOI7tZa21u5WGtdlstjwMBkEgpYyiiB5YlmU/TwbGBMHr0ppATiYTe9kYkyQJ55ySo5QKw3DzlquqCsNwOXWMsbIsq6qieSzn3KYXHhIEb0dJkqRpasNGJxs2f3hZlkqpyWTSGvRowTNNU3t1Mpk0TdNfx2EUcDphR5xzd4ijRZSthGGY5zmtr9gblVJVVbl72bOfME4I3mo01Cil6GS31pquJklCdxBCJEmSZVmWZZPJhBYw6Quhfaz9fphlmb06nU7tyUDOudb666+/dr9J0l6o5el0iqnmg4TzeLujlZXW0Ndjy4wxIUS/LcNIIHgAHmCqCeABggfgAYIH4AGCB+ABTqD3T19f6+treXHx17///W//+Adj7H9+8YtvfvUr/vRpeHoqXr703UHwD6uaPZAXFxQ2dXmpLi/Nx49203/+/OdPvvrq3zc3//X06b9vbujG4MWL4OQkPD0NTk6CkxNE8RFC8LZmbm7U5aW8uNAfPlDY6PbgxYvwl7/82ZMnF//61//985/Bixfp2Vn8m98wxrIffih+/DE8Pf3fX//6Z0+e0KP09bX+8ME+FlF8VBC8+6mrK8pJa0ATr15RTsLT0/D0VF1eFm/fynfv3Mi5jSR/+Yu6vEy//Tb/7jt7u7y4UJeXFGa3cYqx++9gzxcGgOC12QzYpNHt/NkzCthyEqrz8+LtW/3hw8rIuezQV/72tyuz9DmBS1H8NB4iig8CgsfU1ZX+8MEOa3b6RzHjz56Jly/D01P+9OnyY23kxKtX6dnZJlPEdUPfOq0oynfv7CY3inR54ycNnj3G4LmzO3sc2wHt09TxvvFkh8i57h36OthVU/Pxo76+dqNIs1/6sKBp8FYtw2AefvA+zRjvhjV3QKPhYttjdM/IWdsOfR0QxaPzAIO3bnFfvHq157JhX5Fz7TP0dXA/btylV3b3OtBJxXVTaDi0ow+e/bBfubjf1/efQ0TO6nHo696LHfPdF8rOsRHFIR1f8DZZ3O8xGAeNnOtAQ18HN4ruJLwVRZxUPISxB8+erTYfP7qL+/aM84HW1s3NTfXTT9X5+QCRs4YZ+jq4s3Sc3z+o0QVvn8X9Xpibm+Lt2+qnn8zHj/E330SvXw98nA0/9HVAFA/Ef/Bocf/TV7VdF/d70Ypcenbmaw3Q+9DXAT+16cXQwet9cb8X44mca1RD3zr4qc1uDh48d66yckDzO1EZZ+SsMQ996+CnNpvoOXjDLO73YuSRcx3F0NcB5/eX7Ru8jsX90a5HH1HkrGMc+jogilsHT15cDL+435djjJzr2Ie+Dhv+1GZsH+I72zp4X//pT+ry8oslx+P5rYO+vv7v3//+GCNn0dCXnp1Fr1/77sthLf/UJjw9bf7wB9/96sfWwdPX10d6yMKxe0jHnv/zeACPEP68Xz+UUm7RH4Bun0e8lYcOFfLWWlPtqB6LcUspq6oKgkApJYSwFeH2QfXE929nh2Ynk0mapvvXGOl4F/ZseeSqqlJKxXHcewWYcfr8dzWrqrLFTYMgsIdanudUGNWth7onSvJsNuurQZIkSe9tbthsFEW9ZKPjXdi/8TGL4zjLsscza/gcPM45vbtZlgkh6MO7owL4PrTWh/gIP9DbtkmzfVWxG/JdAI8+B2/lodO6saoqKaUxhsZA+3lc13Vd1zQlC4IgTdN1czMqHa61tiXgqDCqvQPV/rZNuZum0ylNuqj8qtsHrXWSJFTcmO7MOXeHqY5mGWO2aiRtZXcjzL3Nsruik/SQ1jRJa10Uhdaa3U0XhRDdU6l73wUqGUvl0SmlnHObTBonwzCkl2i5S6PiHjZRFLmbVj7NlQ9cPt7WvZvjcrskTdP5fL58O+e8LEu63DRNHMd0eTab2cu0KYqi5Ye75vN5mqYrNy0WC3s5z3O7x+4+ECHEuj12NxuGob1D0zStdjqatZZftMViIYSwzS4WiyiKVr6wGzZo+9bqKl0VQjRNQw+kl2WxWLRen1FpHTZlWYZhSE+542kuP3D5eOt+N0dii1XNMAztR28YhvRBzhir67osS/duQogdaoITzrkxRkqptXb30t2HPZsNgkBKaZt1n87OqqpyP4k552ma7jnBpi/Gts0wDKMoopc6DEM7uNHoQXWe99ndQbUOmziO7fPqeJrLD1w+3g7xbvauh6IlUsrldZfWzGFDNBGl2QVjTCnVy0zp3mbLsqyqiqajnPNevrAppVpLtfs/F/sUrCiKiqLYs1kvlr8529en+2nee7wd4t3sXQ/BE0L0tZaYJEmapvYNkFLaj67DNUtHgA2JMWYymTRNs+dO6TRMv2tIywcrFWHvcReDWe62fXbdT7P7eDvQu9m7Hk6gL3/oaq13m+Rwzt1hYdv5ahAE7ntmL3c3S9/j3T5s2Gw3Wh/v2NEOhBBum8aYoih2m1x4FwSB+2oopez70v00u4+3e9/NkfjiJ2NVVdV17S4l0fFqjJlOp3R+kxaIJpOJUiqKIppAF0VB62ns7rhsLUNZtE5ojKGlUfblqmZd11JKOyEUQlRVFUVRnufLfciyrKoqe5XdLWfZPjPGqHsdzbK7U/l2eqO1FkK0FhJXNkst09tsXzTaSk+NFoE3eVlc694Fu9W2qZSirVmW1XVNzyjLMinlbDYLguD58+d5no9zrsUYoxN37gsipUzTNIqilU/T3q3jeLv33RyJPn+rSfO3MAz3+Zih0wytMWrbhy93495m7QNX/vpkXbOb6OVlWdmZ/X8o4x0NVit/mnPv0+x4Ycf/EuFH0gAe4EfSAB4geAAeIHgAHiB4AB4geHA0qvPz6vzcdy/6geDB0dDX1/Xf/ua7F/1A8AA8QPDgmNi/mHzsEDw4Ju4fuj1qCB6ABwgegAcIHoAHCB4cjQfz99sZggdHBMEDgL0geHBk1NWV7y70AMGDI/MwzqEjeAAeIHgAHiB4AB4geHA0xMuXvrvQGwQPwAMED47Mw1jVxN/VhGMiLy6Ck5MH8BMWBA/AA0w1ATzooUwXwOaoqEgQBFQ9plVC8PFA8GA4Wmuq9uq7I/5hqgnD6b1S5/HC4gp8RqX58jyv65rKXDHG0jR1i13VdV3XNdW1C4LA1nmnyoeMsfl8TvdhjNnadFQNW2u9si4iuyso6VYFtMW31rXsFqMMgiAMQ9rkFtOjgsy2t+4ep9MplQejR9FWt+KX1rooCtoL3VMIQS2vexG2cAvgmM/nQoj5fE5XF4tFHMdN09DV2WwWx7G9c9M0URS5D6evbXme29ZajadpurzTpmmEEIvFYuXVjpaFENS3NE2pY9Rh+yi3kTzPy7J02+Sc21uapmk90O3DYrGIooh2eu+LsAkED76wnA065ujy8hFWluVsNrNXhRCtg7u7cRLHcStmZVm22lnZsm0tTVMbciFEq//z+fz9+/fLe2/d072a53nrU6Npmvfv399u8CJsAosr0NYqmss5t2XfpZSTyaR1/1YR9h3qHtvKyW6brULnO7RM81vbuFJq8zLDSqnWiqt97CYvwr0QPGiTUrqHkbsiIoQ4xJqkDbZFdbP3bDZJkjRN3cBQ9eZNBEGwbimolxcBq5rQRosK9jIdvnR1eSCiIuZ77lEIkWWZvWqMKYpi2zFkWavkPS2ibCiOY7dL7G75h/X0ImBVE75AY4LWWkoZBIExJk1T94O/KApaRWR3IxUtBhZFIaV0p3Pu6iIF2BizblWzqiraI2NMKeU+dl3LWZbVdR1FUZ7nWZZJKWezWRAEz58/z/M8juO6rqWUdp4phKiqiu5vjJlOp0qpOI6pG1mWVVVlr7a65D7Tjhdh89cZwYMvUPDc8wcddwvDcP8JoWWMoXMY9+592zZbQ99WOp7pPi8Cggdf2DB4sCcsrsBnVVXR1xg6wYVfmRwORjwAD7CqCeABggfgAYIHR0NdXenra9+96AcWV+AImJubrK6rn35ijIlXr8rvvz/2P7uCxRUYu+r8PKtrxlj8zTfByYm9nH/3ne+u7Q7Bg/HS19fJmzfy3Tt3lLOjX3h6mkfRkf6VWwQPRir74Yfixx/5s2fl999Hr1+3tsqLi+TNG/3hQ/rtt+nZGX/61Esnd4bgwehsHqrucI4ZggcjssM0cuV0dPwQPBgLdxFl24WTfR7rBYIH/vUyah3XoguCB571+z3tWBZdEDzw5nAhGf+iC4IHHgwwLRz5oguCB0MbciFktIsuCB4Mx8soNM5FFwQPBuL3e9fYFl0QPDi48Rz041l0QfDggEY4zRvJoguCB4cy2oUNNoK+IXjQv5GMKt38jsYIHvRMXV19/cc/juF71Cbs98/Z7343ZG8RPOhfdX4evX7tfeVwc8Xbt+nZ2ZB7RPAAPMBfGQPwAH9lDLZAVb+Xb9da099+dwsAHSkpZVVVQRBQgaFWecq+YKoJW5hOpx01GSeTyXw+H7I/vdNaZ1l2iOKbLZhqwhaWS7c+MOuqwPYOU03YCFWWVErZ8t+c8+WRgYo5UvVJt1ZjXdd1XdNMNQiCNE17LKy3FSrsqrWm2ui2k1QwXWtty/S1Smf27BZgY0KIjq1U3IsuN00TxzFdns1m9jJtiqLocJ3s0DSNEGKxWKy8ent7O5/P0zQdoCeYakJvwjCM49hetmXB67ouy9K9mxBiq4rkfamqajab2cE2DMMoirz0BFNNODgppZ2gWlEUDd8Tml62ulEUxfA9QfDg4IQQA6wTbmJ5cYgqpA/fE0w1YQtBELjH7oaLnMujitbaTkSHJITIssxeNcYUReFl7MV5PNiCUirLsjAM2V3q6MubMWY6nSql4jimlcDJZKKUiqKI7lAUhVKKVurpge6a55Bo3ZV6opTK85yeDi3bGmNoSZYdeFUTwYPtuKvt2yZHSrnbA/tln4IQwlcfEDwAD/AdD8ADBA/AAwQPwAMED8ADBA/AAwQPgCVv3kz+/Och94jgATD+7NnAe0TwADxA8AAYY0xdXg65OwQPgDHGzMePQ+4OwQPwAMED8ADBA/AAwQNgwxfuQ/AAPEDwAD4xNzeD7QvBA/hkyFN5CB6ABwgegAcIHoAHCB4AC05OBt4jggeA4AE8DggeAGOMiVevhvwPCviDtgAeYMQD8ADBg2OilBq+DvshdorgwVhUVZVlGVVaX3efLMs6tkopp9NplmWTyWTDcpObJKp7p7tBYUoYCyrjnGVZRxiiKKIaWsu01lRpeaudJkly70M6drozBA+Oia2xvkxrvUM8NhnxOna6MwQPjoOd79lSkpYxJkkSrbVbu8/WlKzruq5rYwznPAiCNE2pOh9VolRK2frsnPPW6Ldup7asLFXbDMOwrmv3but2+tktwJikaTqfz3fYOp/P0zRt3TibzeI4tlebpomiyL2DEGK3LgkhmqahrbSLxWJBF+7d6e3tLRZX4CGr65pqQZMwDIUQNDrtKQxDOwZSFXXOORV232SnmGrCQyaltDNJi3Lid6cIHjxkQoht1zmH2SmmmvCQRVHUOqGntaYJIQmCwF3Y7OVE+b07ZfitJoxEXddVVTHGtNacc1oDLMuSzhB0b6X1SWOMMYZucVc1i6KgtUd2l6s8z+0ao1IqyzL6tkZb7dezjp1mWVbXdRRFeZ5nWSalnM1mQRA8f/48z/M4jrt3yhA8eCSklIyxMAzby/qMuSchlrceaKcIHoAH+I4H4AGCB+ABggfgAYIH4AGCB8D09bW6uhpyjwgeAKvOz7M+fsC5OQQPwAMED8ADBA/AAwQPwAMED8ADBA/AAwQPwAMED8ADBA/AAwQPwAMED8ADBA/AAwQPwAMED8ADBA/AAwQPwAMED8AD1E4AYOLly+DkZMg94g/aAniAqSaABwgegAcIHoAHCB6ABwgegAc4nQCPWpZlWmtjDOc8CAJbzvLQcDoBHjWKHF0uioJzHsfxAPvFVBMeNc65MUZKqbUOw7BVqfxwMNWEx8sYkySJrW+ulKJi6ANA8ODxSpIkTVMbNiklVS0fAKaa8Hhxzt0hrh6wYBBGPHi8hBA01WSMKaWEEFVVMcYGWNvEqiY8asYYpVRr6BsAggfgAb7jAXiA4AF4gOABeIDgAXiA4AF4gOABeIDgAXjw/1DHPqn5DVQXAAAAAElFTkSuQmCC"
->
 </div>
 
 </div>
@@ -2846,12 +3353,12 @@ fantastic	JJ	2	ccomp
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[127]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">dep_tree</span> <span class="o">=</span> <span class="n">mp</span><span class="o">.</span><span class="n">parse_tagged_sents</span><span class="p">([</span><span class="n">nltk</span><span class="o">.</span><span class="n">pos_tag</span><span class="p">(</span><span class="s">&#39;I think Tom Hanks and Mr. T were awful.&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">())])</span>
 <span class="n">graph</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="nb">iter</span><span class="p">(</span><span class="n">dep_tree</span><span class="p">)))</span>
-<span class="n">graph</span><span class="o">.</span><span class="n">tree</span><span class="p">()</span>
+<span class="n">graph</span>
 </pre></div>
 
 </div>
@@ -2862,12 +3369,117 @@ fantastic	JJ	2	ccomp
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[127]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[30]:</div>
 
+<div class="output_svg output_subarea output_execute_result">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.38.0 (20140413.2041)
+ -->
+<!-- Title: G Pages: 1 -->
+<svg width="232pt" height="488pt"
+ viewBox="0.00 0.00 231.64 488.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 484)">
+<title>G</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-484 227.641,-484 227.641,4 -4,4"/>
+<!-- 0 -->
+<g id="node1" class="node"><title>0</title>
+<text text-anchor="middle" x="110.132" y="-457.8" font-family="Times,serif" font-size="14.00">0 (None)</text>
+</g>
+<!-- 2 -->
+<g id="node2" class="node"><title>2</title>
+<text text-anchor="middle" x="110.132" y="-369" font-family="Times,serif" font-size="14.00">2 (think)</text>
+</g>
+<!-- 0&#45;&gt;2 -->
+<g id="edge1" class="edge"><title>0&#45;&gt;2</title>
+<path fill="none" stroke="black" d="M110.132,-443.851C110.132,-431.725 110.132,-415.219 110.132,-401.319"/>
+<polygon fill="black" stroke="black" points="113.632,-401.313 110.132,-391.313 106.632,-401.313 113.632,-401.313"/>
+<text text-anchor="middle" x="121.023" y="-413.4" font-family="Times,serif" font-size="14.00">null</text>
+</g>
+<!-- 1 -->
+<g id="node3" class="node"><title>1</title>
+<text text-anchor="middle" x="77.1322" y="-280.2" font-family="Times,serif" font-size="14.00">1 (I)</text>
+</g>
+<!-- 2&#45;&gt;1 -->
+<g id="edge2" class="edge"><title>2&#45;&gt;1</title>
+<path fill="none" stroke="black" d="M100.266,-355.087C97.2902,-349.5 94.1841,-343.19 91.797,-337.2 88.6343,-329.264 85.8605,-320.391 83.6012,-312.262"/>
+<polygon fill="black" stroke="black" points="86.9584,-311.267 81.0238,-302.49 80.1899,-313.052 86.9584,-311.267"/>
+<text text-anchor="middle" x="107.3" y="-324.6" font-family="Times,serif" font-size="14.00">nsubj</text>
+</g>
+<!-- 9 -->
+<g id="node4" class="node"><title>9</title>
+<text text-anchor="middle" x="158.132" y="-280.2" font-family="Times,serif" font-size="14.00">9 (awful.)</text>
+</g>
+<!-- 2&#45;&gt;9 -->
+<g id="edge3" class="edge"><title>2&#45;&gt;9</title>
+<path fill="none" stroke="black" d="M119.615,-355.051C126.518,-342.568 135.988,-325.444 143.81,-311.3"/>
+<polygon fill="black" stroke="black" points="146.892,-312.958 148.669,-302.513 140.766,-309.571 146.892,-312.958"/>
+<text text-anchor="middle" x="157.792" y="-324.6" font-family="Times,serif" font-size="14.00">ccomp</text>
+</g>
+<!-- 4 -->
+<g id="node6" class="node"><title>4</title>
+<text text-anchor="middle" x="107.132" y="-191.4" font-family="Times,serif" font-size="14.00">4 (Hanks)</text>
+</g>
+<!-- 9&#45;&gt;4 -->
+<g id="edge8" class="edge"><title>9&#45;&gt;4</title>
+<path fill="none" stroke="black" d="M147.621,-266.366C144.142,-260.674 140.273,-254.281 136.797,-248.4 131.893,-240.103 126.638,-230.998 121.933,-222.767"/>
+<polygon fill="black" stroke="black" points="124.893,-220.893 116.903,-213.935 118.81,-224.357 124.893,-220.893"/>
+<text text-anchor="middle" x="152.3" y="-235.8" font-family="Times,serif" font-size="14.00">nsubj</text>
+</g>
+<!-- 8 -->
+<g id="node10" class="node"><title>8</title>
+<text text-anchor="middle" x="192.132" y="-191.4" font-family="Times,serif" font-size="14.00">8 (were)</text>
+</g>
+<!-- 9&#45;&gt;8 -->
+<g id="edge9" class="edge"><title>9&#45;&gt;8</title>
+<path fill="none" stroke="black" d="M164.85,-266.251C169.646,-254.006 176.192,-237.295 181.669,-223.311"/>
+<polygon fill="black" stroke="black" points="185.04,-224.301 185.429,-213.713 178.523,-221.748 185.04,-224.301"/>
+<text text-anchor="middle" x="188.24" y="-235.8" font-family="Times,serif" font-size="14.00">dep</text>
+</g>
+<!-- 3 -->
+<g id="node5" class="node"><title>3</title>
+<text text-anchor="middle" x="31.1322" y="-102.6" font-family="Times,serif" font-size="14.00">3 (Tom)</text>
+</g>
+<!-- 4&#45;&gt;3 -->
+<g id="edge6" class="edge"><title>4&#45;&gt;3</title>
+<path fill="none" stroke="black" d="M92.117,-177.451C80.8751,-164.612 65.334,-146.862 52.7542,-132.495"/>
+<polygon fill="black" stroke="black" points="55.337,-130.131 46.1162,-124.913 50.0704,-134.743 55.337,-130.131"/>
+<text text-anchor="middle" x="83.1322" y="-147" font-family="Times,serif" font-size="14.00">nn</text>
+</g>
+<!-- 7 -->
+<g id="node7" class="node"><title>7</title>
+<text text-anchor="middle" x="107.132" y="-102.6" font-family="Times,serif" font-size="14.00">7 (T)</text>
+</g>
+<!-- 4&#45;&gt;7 -->
+<g id="edge4" class="edge"><title>4&#45;&gt;7</title>
+<path fill="none" stroke="black" d="M107.132,-177.451C107.132,-165.325 107.132,-148.819 107.132,-134.919"/>
+<polygon fill="black" stroke="black" points="110.632,-134.913 107.132,-124.913 103.632,-134.913 110.632,-134.913"/>
+<text text-anchor="middle" x="119.185" y="-147" font-family="Times,serif" font-size="14.00">conj</text>
+</g>
+<!-- 5 -->
+<g id="node8" class="node"><title>5</title>
+<text text-anchor="middle" x="180.132" y="-102.6" font-family="Times,serif" font-size="14.00">5 (and)</text>
+</g>
+<!-- 4&#45;&gt;5 -->
+<g id="edge5" class="edge"><title>4&#45;&gt;5</title>
+<path fill="none" stroke="black" d="M121.555,-177.451C132.253,-164.73 147.004,-147.19 159.027,-132.895"/>
+<polygon fill="black" stroke="black" points="161.982,-134.819 165.74,-124.913 156.625,-130.314 161.982,-134.819"/>
+<text text-anchor="middle" x="157.347" y="-147" font-family="Times,serif" font-size="14.00">cc</text>
+</g>
+<!-- 6 -->
+<g id="node9" class="node"><title>6</title>
+<text text-anchor="middle" x="107.132" y="-13.8" font-family="Times,serif" font-size="14.00">6 (Mr.)</text>
+</g>
+<!-- 7&#45;&gt;6 -->
+<g id="edge7" class="edge"><title>7&#45;&gt;6</title>
+<path fill="none" stroke="black" d="M107.132,-88.6511C107.132,-76.5249 107.132,-60.019 107.132,-46.119"/>
+<polygon fill="black" stroke="black" points="110.632,-46.1132 107.132,-36.1133 103.632,-46.1133 110.632,-46.1132"/>
+<text text-anchor="middle" x="114.132" y="-58.2" font-family="Times,serif" font-size="14.00">nn</text>
+</g>
+</g>
+</svg>
 
-<div class="output_png output_subarea output_execute_result">
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMcAAACzCAIAAACy1J9GAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAHXRFWHRTb2Z0d2FyZQBHUEwgR2hvc3RzY3JpcHQgOS4xNnO9PXQAAA4nSURBVHic7Z2/b9tIFscnh1TOAocJNmkT0J1dMqrtgroiaZfq05BAmms2S3bZ7Shs/gGy2d2WTLtuNIWNK6Up7WIBD+xim/igAW4RLXBYQFe884QhZVqihj/1PkhhURxyRH458+Yx850Hy+WSIIhW/tZ0BZAegqpC9IOqQvTTB1VxzqWUTdcC+UwrVHWXJoQQvu/7vl9c3Pd9zvlGZ/R9fzQabVQE2YBlC7Btu+Bby7KKi4dheHl5uelJ7z0sUpqHTauakLvbqjVxHEdXTRAtNKwqIYTrupzz4XAIWyilcRxndouiiDEmpTQMIwgCSilsV31fEASmaaaLjEYjwzAMw0iShBCSKZjZU0q58rxISZpuLJfL+zojSmkYhvD3bDZzHCezg+d5k8lk04Jw0vl8btv2bDYrXXkkTyt6wGJM01R9nGmaQghdBTnnvu/HcbyyDUNK04oxYFNEUWSaJkpKOzutqjAMbdseDoeY7tJLK1RlGEb6vtZ5j03TDIIAAvbaTtp/mg7slsvlcjabWZbleZ7neY7jqLB6Pp9blkUp9TwPtsBH2CGOY8uyLMsyDMM0TfgbElf5gp7npT/atk0phb8vLy9htKi+RbbkwbId/xNGSgk5Agx0ekBbVIX0iVbEVUjPQFUh+kFVIfrpiarkYiEXi6ZrgfyfDryxKYBdXLCLi2Q6/fcff/znzz/N58/twcA6PDSfPWu6ajtN98aAcrFIplN+dZVMp/LTJ/rokT0YPPv66//+9dfF778n0ykhxHj61B4MzGfP7MGg6fruIp1RFb++Zufn7OKCnZ+TW91YBwfWwUF6N7lYwG5Kc9bBgXV4aB0cGE+eNFT3naPtqkqmU359nUyn4uNHQog9GEA3t45EoCA7P+dXV4QQ8/lz6/AQ2rCqq73jtFFV0MdBk6P6OGhy6N5eiQOKmxto5FT/CI0c9o8V0SJV1dO0JNMpxPglGj9kTZpXVf421xMGQaAGgT/B/lErzahK3NyocRxpukta2eFCA1auw0VqVVX7w+fM4ABaTewfN6VyVd011G95SwCt6b2JDGQlValq5V3pYloyn3TtxFPRLJpVpV6h9LIHyffg+IJoJRpUtfIVSr+j3fxoo6MtcUWUV9XKkfmuRR4qaqw/M9JmNlbVNq9Q+k37R7i1sZaqMm88tn+F0m/wchWpCh++7dnNpj2rKgwUKmKnwtDPqmIXF9HpKQ5qqmblkNl7+bJPD+1nVSXT6fjkBBMwdaLSe7N37/oUcjX/fxaQ/tGTOTZIq3hICGGMpTdRSjNuiIheGGNRFBmGwTkH25J1SkVRJISQUjqO0/Ib9FBKCarinBuGQSlFVVWKECKKohIepOAb6Pt++02RHlJKgyAghPi+D2Y9TVep5wghDMNouhbV0u1Zpk3h+z50RpRScEeG7UmSRFFECFFeo4yx8XhMCAnDkFLqui4UVLZKUBa8nNVHOI762D2Uk9VdTsBInvl8rv4OgkA5JS+Xy7zFchzH6R0mk8ld9msZL+eV1s6duE04BiwDpRTiUSFExh3ZMAyIU0ejEbRSEJI3VtcmwB5wY6SUruvCsIYQwjlPD24sy2KMwbgHurldCKQyoKo2xnVdz/OUkhhj6dSMaZrQRFmWxTkXQuygISX2gBuTybzAiiaZHRhjtm3btu37fjlV5Q9bjBBif39fLdzSLA+llLCmmRCCMQaDmjAMm65Ye7EsC3pAchszwbhPjdfgGhJCTNPknKv1KWCgJ6XMjwEB0zThyLBiDyxdkR4VktRtIoSEYaj6VikljC7rugxF4HvAMoAsqkgXwwqa5YycoUptiOFQVYh+MK5C9IOqQvSDqkL0g6pC9IOqap5kOoXpAr0Bc+uNIW5uorMzNakLZqA4R0c9mBaBmYUGSE9nco6PYSJTMp1Gp6dqS6dndKGq6kMuFtHpaXR2Jj5+NJ4+dY6OnOPj9NSadOtlPH3qvXzZUQcUVFUd8Ovr6PQUmiJ7MIB/BfuDttj5eUdnC6KqKgQmlEanp/zqij565BwfbxQ2iZub8ckJTEYFLwLn6KjSCusCVVUJ0JdFp6fbCwKkOT45gW6xExE9qkoz1XVeMMu5ExE9qkoP6cbJfP4c7noVgXYnInpU1bZADjOdJqinCWlzRI+qKsm9aYJ6aGdEj6ramHR8Yw8GzvFx4/FN2yJ6VNW6pNMEbbhzK2lJRI+qup929jIFNB7Ro6qKSEfEm+Yw20BTET2qagW1pQnqof62FlX1BZk0gXN83BszyzojelQVIYTIxQKe5mbTBPVQQ0S/66pqyaCpfiqN6HdaVS9++KHNaYJ6SEf0k7dvtfT4O62q6OyM7u2hpzy5bbqCb77RcrSdVhVSETjHBtFPV1UF1ijgrEJuTaS2d0TxfR8ccpBt6KqqGGOu64LJEyjMdV0lstIEQdASs55uU6cJqV7W8Wbd/rBICfo5y/Qu52pCyGg0MgzDMAxo5+DblWZRo9EIjpB23AenMpKyPmuheXWxQTdUO0mSJEnUJfI8D/YE6zZCyGQygX0IIZZlKW+3uwp+QdOyLk9BW1XgXL1cLimlastsNst4WcNx5vO5bduz2SxzUtM01cFns1lrG7Zig+44jtM7zGYz27bTO8M6KEEQwEflxX1vQaDDqoIHRZG5wfP5fDKZXF5e5v3Ni7tOy7JALmlpKmzbjuNYfby8vNTwSyogCAKQgm3bIA7P81Rt81IIwzD9uyzLyjyKaxYEOtwDZro2ZbRa7Fy9DrAuw8puMQzDKIqgh6WUqn6hbRQbdDPG8r60tm2nP678aesUJL107yh2rl6HMAw558PhUMUlAAwP1RJZUsrhcDibzTRVXCfFBt2WZZVYnmn9gl3NLBRwr3P1OoC7MATsaiPnHKJgdaJt6lk1BQbdtm2D5hRCiPQKF3exZsFOtlXg5s05H41GcRzDsIVz7rpuGIYFztWqoHKc9n0//RG+hbNQSoUQL168gNAENsJZ1HCptT0gudugm9yKA4bD5LYNht84Ho8hvax6uiAI1FNaUDBNP98DVudcrQ5OCOnB6jQQG5Qw4i4u2E9VIc3Sw7gKaRxUFaIfVBWiH1QVop9OZha0kEyn//rtt8dfffXP4bCv02maYufGgGkvF9jSQqeerrNDqsp7ubi//PKPw8O/7+1psVpEFP1XVcGc3eH793RvL37zJu/34r18id1iafqsKvCjVv4CztFRZpLW8P17Qsjk22/Vlsyk0z7NiK+TfqpqTS8X/8MHdn4+e/cusz3v3oHd4kb0SlWbqsH/8GH866/Ln366a4euOw01RU9UpbxcYEC3Zs8VnZ25P/9coCogs7JDGywbW063VbWllwu7uBj++OPs++/XkWDGXradltQtoauq0uLlAqqavH27UdlkOo3OzrBbLKBjqso0GNt7uTx4/Tp+86aEgUfGwC4/wNxlOqOqdJpgnWWr1uTB69feq1elvVAyybB+26mtTwdUBcO6cstW3cu+59mDwfYOO2ohyY2GC32lvarSuGxVASq9ruVo9dS5/bRRVelwuOrnPp9e14JqX3fTyK9FqmrEe/6u9LoWdtZ0tBWqavDq35te3550Um1H3v80qap8mqD+/ymwZnpd17l25P1PM6radHXr6tgova6FTIqkl+9/GlCVuLnZ/+67ljyv7OJifHIS2HbNiYB0O71pcr/9NNNWJdMpZqKBXl6KVkTrSM/AmVuIfnTO3OKc5w2AwYRT41nqJ4oi8FTR6AXS12sF6FRVFEXK3wdc3mB7C/1YN8JxHN/39Tpm9/VaATpVRSlVplCWZYERDzj+Ihn6fa10qmqlRVh6I3jVgZsgXFZ4RtXVhAfXNE0wyEv7cZXjLovse/2x0/7Ped/L7bn3WnWbNT1xN8LzPOWlrMgYA2c+gnMwlAXv5fl8nrd33pQCi+wCf+yM/3MYhqZp5n+RFlZeq65T3xgwiqK0eatpmrZtK9NO0zTTNoHk1kBxy5NSSqWUjDEhhGma6QOapqnahsxXSZKEYag+Oo7TcgvQtlGfe4eyqlbkrUv1UtoiOx+YV+EE2WPqU1X+VoF1Z3VnLG2Rna8VLpm0EfX1gJZlpcc4UsrxeFxFIKwobZFtGEbaAZtzXs5ee2fR/MYmiqIkSdKjvPR9jaIIFiwghHDO1be+7ydJAgbUvu8zxuI4Ngzj8ePHQRCUHhklScIYy1hk27bteR44YDuOo4b3URSpj7AFBoDqaIwxz/M0PgbF16rT1P0esGZb6W0sssGfvjf57jrBt8uIfvDtMqIfVBWiH1QVoh9UFaIfVFXD8OtrcXPTdC00g6pqGD9JorOzpmuhGVQVoh9UVfPwq6umq6AZVBWiH1QVoh9UFaIfVFXD9NLAA1XVMPTRo6aroB9UFaIfVFXzYGYB0Y/89KnpKmgGVYXoB1WF6AdVhegHVdUwPfNuBFBViH5QVa1ALhZNV0EnqKpW0LOUFaqqYYwnT7xXr3r2NhBnmSL6wbYK0Q+qCtEPqqoShBBg8JffuAtWWKiqSuCcj8fjjJOg67qu64IlTr9BVVWCbdvgbaSaKzDoMgyjHoulZkFVVYjnecqzD1QFfwshhsPhcDiE7aPRaDQapd39uk59vqA7iGEYUkopJbirKec+wzAmk8lwOPR9n1IaxzEhZE3P0k6AqqoW8GmWUnqel//WMAzlT9mnnhF7wGqxLAsGfSttIPuzGMSXYFtVOZ7n7doiANhWVU46olofIcT+/j5E9J0D26pKAK9vMN+God94PGaMwfpQsAgK51yJJm+LDTF+R1Om+Ha5vYCndxd9uVFViH4wrkL0g6pC9IOqQvSDqkL0g6pC9IOqQvSDqkL08z/dVyEWmjKhDQAAAABJRU5ErkJggg=="
->
 </div>
 
 </div>
@@ -2884,10 +3496,10 @@ fantastic	JJ	2	ccomp
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Topic-Modelling">Topic Modelling<a class="anchor-link" href="#Topic-Modelling">&#182;</a></h1><h3 id="divide-a-corpus-into-topics-(sort-of)">divide a corpus into topics (sort of)<a class="anchor-link" href="#divide-a-corpus-into-topics-(sort-of)">&#182;</a></h3>
+<h1 id="Topic-Modelling">Topic Modelling<a class="anchor-link" href="#Topic-Modelling">&#182;</a></h1><h3 id="divide-a-corpus-into-topics-based-on-distributional-word-usage">divide a corpus into topics based on distributional word usage<a class="anchor-link" href="#divide-a-corpus-into-topics-based-on-distributional-word-usage">&#182;</a></h3>
 </div>
 </div>
-</div><div class="fragment" data-fragment-index="73">
+</div><div class="fragment" data-fragment-index="80">
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -2895,7 +3507,7 @@ fantastic	JJ	2	ccomp
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>topics are defined by how language is used, they don't necessarily correspond to what think of topics</li>
+<li>topics are defined by how language is used, they don't necessarily correspond to what we think of topics</li>
 </ul>
 
 </div>
@@ -2903,21 +3515,358 @@ fantastic	JJ	2	ccomp
 </div>
     </div></section><section>
     
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="distributional-semantics">distributional semantics<a class="anchor-link" href="#distributional-semantics">&#182;</a></h2><table>
+<tr><th>features</th><th colspan=7><center>features</center></th></tr>
+<tr><td></td> <td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+<tr><td>0</td> <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>1</td> <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>2</td> <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>3</td> <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>4</td> <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>5</td> <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td>6</td> <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+</table>
+</div>
+</div>
+</div></section><section>
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[247]:</div>
+<div class="prompt input_prompt">In&nbsp;[182]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="kn">import</span> <span class="nn">re</span>
+
+<span class="k">def</span> <span class="nf">keep_token</span><span class="p">(</span><span class="n">token</span><span class="p">,</span> <span class="n">tag</span><span class="p">):</span>
+    <span class="n">keep</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s">&#39;(NN.*)|(VB.*)|(JJ)&#39;</span><span class="p">,</span> <span class="n">tag</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="k">None</span>
+    <span class="k">return</span> <span class="n">keep</span>
+
+<span class="c"># preprocessing</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s">&#39;~/Documents/PUB_nlp/lda.moviereviews.in.txt&#39;</span><span class="p">),</span> <span class="s">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">out</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">fileid</span> <span class="ow">in</span> <span class="n">corpus</span><span class="o">.</span><span class="n">movie_reviews</span><span class="o">.</span><span class="n">fileids</span><span class="p">():</span>
+        <span class="n">pos_tagged_sents</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">pos_tag_sents</span><span class="p">(</span><span class="n">corpus</span><span class="o">.</span><span class="n">movie_reviews</span><span class="o">.</span><span class="n">sents</span><span class="p">(</span><span class="n">fileid</span><span class="p">))</span>
+        <span class="n">words</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;{}/{}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">tag</span><span class="p">)</span> <span class="k">for</span> <span class="n">sent</span> <span class="ow">in</span> <span class="n">pos_tagged_sents</span> <span class="k">for</span> <span class="n">w</span><span class="p">,</span> <span class="n">tag</span> <span class="ow">in</span> <span class="n">sent</span> <span class="k">if</span> <span class="n">keep_token</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">tag</span><span class="p">)]</span>
+        <span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">words</span><span class="p">))</span>
+        <span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&#39;</span><span class="se">\n</span><span class="s">&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div><div class="fragment" data-fragment-index="83">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[184]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="c"># you can run shell commands in notebook - how awesome is that?</span>
+<span class="o">!</span>wc -l ~/Documents/PUB_nlp/lda.moviereviews.in.txt
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>    2000 /Volumes/LocalDataHD/ml249/Documents/PUB_nlp/lda.moviereviews.in.txt
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    </div></section><section>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[185]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="c"># you can run shell commands in notebook - how awesome is that?</span>
+<span class="o">!</span>head -1 ~/Documents/PUB_nlp/lda.moviereviews.in.txt
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>plot/NN teen/NNS couples/NNS go/VBP church/NN party/NN drink/VBP drive/JJ get/VBP accident/NN guys/NNS dies/VBZ girlfriend/NN continues/VBZ see/VB life/NN has/VBZ nightmares/NNS s/NNS deal/NN watch/NN movie/NN sorta/NN find/NN critique/NN mind/NN fuck/NN movie/NN teen/NN generation/NN touches/VBZ cool/JJ idea/NN presents/NNS bad/JJ package/NN is/VBZ makes/VBZ review/NN harder/JJR write/VB applaud/VBP films/NNS attempt/NN break/VB mold/NN mess/NN head/NN such/JJ (/NN lost/VBD highway/NN are/VBP good/JJ bad/JJ ways/NNS making/VBG types/NNS films/NNS folks/NNS didn/VBP t/NN snag/NN seem/VBP have/VB taken/VBN neat/JJ concept/NN executed/VBN are/VBP problems/NNS movie/NN main/JJ problem/NN is/VBZ s/NNS jumbled/VBN starts/VBZ normal/JJ &quot;/NN downshifts/VBZ &quot;/NN fantasy/NN world/NN audience/NN member/NN have/VBP idea/NN s/VBZ going/VBG are/VBP dreams/NNS are/VBP characters/NNS coming/VBG dead/JJ are/VBP others/NNS look/NN dead/JJ are/VBP strange/NN apparitions/NNS are/VBP disappearances/NNS are/VBP looooot/NN chase/NN scenes/NNS are/VBP tons/NNS weird/JJ things/NNS happen/VB most/JJS is/VBZ explained/VBN don/JJ t/NN mind/NN trying/VBG unravel/VB film/NN does/VBZ is/VBZ give/JJ me/NN same/JJ clue/NN get/VBP kind/JJ fed/JJ while/NN is/VBZ film/NN s/NNS biggest/JJS problem/NN s/NNS got/VBD big/JJ secret/NN hide/VB seems/VBZ want/VB hide/VB final/JJ minutes/NNS do/VBP make/VB things/NNS entertaining/VBG thrilling/VBG engaging/VBG meantime/NN sad/JJ part/NN is/VBZ arrow/NN dig/JJ flicks/NNS figured/VBD half/NN way/NN point/NN strangeness/NN did/VBD start/VB make/VB little/JJ bit/NN sense/NN didn/VBP t/NN make/NN film/NN entertaining/VBG guess/VBP bottom/NN line/NN movies/NNS is/VBZ make/VB sure/JJ audience/NN is/VBZ are/VBP given/VBN secret/NN password/NN enter/VB world/NN understanding/NN mean/VBP showing/VBG melissa/NN sagemiller/NN running/VBG visions/NNS minutes/NNS movie/NN is/VBZ lazy/JJ !/NN okay/NN get/VBP are/VBP people/NNS chasing/VBG don/VBP t/NN know/VB are/VBP do/VBP need/VBP see/VB giving/VBG different/JJ scenes/NNS offering/VBG further/JJ insight/NN strangeness/NN going/VBG movie/NN studio/NN took/VBD film/NN director/NN chopped/VBD shows/VBZ &apos;/VB ve/JJ been/VBN decent/JJ teen/NN mind/NN fuck/NN movie/NN guess/VBP suits/NNS decided/VBD turning/VBG music/JJ video/NN little/JJ edge/NN make/VB sense/JJ actors/NNS are/VBP good/JJ most/JJS part/NN wes/NNS bentley/NN seemed/VBD be/VB playing/VBG exact/JJ same/NN character/NN did/VBD american/NN beauty/NN new/JJ neighborhood/NN biggest/NN kudos/NNS go/VBP sagemiller/VB holds/NNS her/VBP own/JJ entire/JJ film/NN has/VBZ feeling/VBG character/JJR s/NNS unraveling/VBG overall/JJ film/NN doesn/NN t/NN stick/NN doesn/VBP t/NN entertain/NN s/VBZ confusing/VBG excites/VBZ feels/VBZ redundant/JJ most/JJS runtime/NN cool/JJ ending/VBG explanation/NN craziness/NN came/VBD oh/NN way/NN is/VBZ horror/NN slasher/NN flick/NN s/NNS packaged/VBD look/VB way/NN someone/NN is/VBZ assuming/VBG genre/NN is/VBZ hot/JJ kids/NNS wrapped/VBD production/NN years/NNS has/VBZ been/VBN sitting/VBG shelves/NNS whatever/NN skip/NN s/NNS joblo/VBP coming/VBG nightmare/NN elm/NN street/NN blair/JJ witch/NN crow/NN crow/NN salvation/NN lost/VBD highway/NN others/NNS (/VBP stir/JJ echoes/NNS
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[186]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="kn">import</span> <span class="nn">gensim</span>
 
-<span class="c"># preprocessing</span>
+<span class="c"># preprocess</span>
+<span class="n">dictionary</span> <span class="o">=</span> <span class="n">gensim</span><span class="o">.</span><span class="n">corpora</span><span class="o">.</span><span class="n">Dictionary</span><span class="p">()</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s">&#39;~/Documents/PUB_nlp/lda.moviereviews.in.txt&#39;</span><span class="p">),</span> <span class="s">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fh</span><span class="p">:</span>
+    <span class="n">bow_stream</span> <span class="o">=</span> <span class="p">(</span><span class="n">article</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">article</span> <span class="ow">in</span> <span class="n">fh</span><span class="p">)</span>
+    <span class="n">lda_corpus</span> <span class="o">=</span> <span class="p">(</span><span class="n">dictionary</span><span class="o">.</span><span class="n">doc2bow</span><span class="p">(</span><span class="n">bow</span><span class="p">,</span> <span class="n">allow_update</span><span class="o">=</span><span class="k">True</span><span class="p">)</span> <span class="k">for</span> <span class="n">bow</span> <span class="ow">in</span> <span class="n">bow_stream</span><span class="p">)</span>
+    <span class="n">gensim</span><span class="o">.</span><span class="n">corpora</span><span class="o">.</span><span class="n">MmCorpus</span><span class="o">.</span><span class="n">serialize</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s">&#39;~/Documents/PUB_nlp/lda.moviereviews.in.mm&#39;</span><span class="p">),</span> <span class="n">lda_corpus</span><span class="p">)</span>
 
-<span class="c"># train topic model</span>
-
-<span class="c"># view contents</span>
+<span class="n">corpus</span> <span class="o">=</span> <span class="n">gensim</span><span class="o">.</span><span class="n">corpora</span><span class="o">.</span><span class="n">MmCorpus</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s">&#39;~/Documents/PUB_nlp/lda.moviereviews.in.mm&#39;</span><span class="p">))</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+</div><div class="fragment" data-fragment-index="86">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[187]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="nb">list</span><span class="p">(</span><span class="n">dictionary</span><span class="o">.</span><span class="n">items</span><span class="p">())[:</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[187]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[(35666, &apos;partisanship/NN&apos;),
+ (27560, &apos;dukakis/NNS&apos;),
+ (7091, &apos;investigated/VBN&apos;),
+ (22555, &apos;beefy/NN&apos;),
+ (37245, &apos;repugnant/JJ&apos;),
+ (42138, &apos;aboard/VBN&apos;),
+ (21205, &apos;smits/NNS&apos;),
+ (7574, &apos;sister/NN&apos;),
+ (6094, &apos;biggs/NNS&apos;),
+ (19769, &apos;impenetrable/JJ&apos;)]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div><div class="fragment" data-fragment-index="87">
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[188]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="c"># train a TFIDF model</span>
+<span class="n">tfidf</span> <span class="o">=</span> <span class="n">gensim</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">TfidfModel</span><span class="p">(</span><span class="n">corpus</span><span class="o">=</span><span class="k">None</span><span class="p">,</span> <span class="n">dictionary</span><span class="o">=</span><span class="n">dictionary</span><span class="p">)</span>
+<span class="n">corpus_tfidf</span> <span class="o">=</span> <span class="n">tfidf</span><span class="p">[</span><span class="n">lda_corpus</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+    </div></section><section>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[189]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="c"># train LDA model</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="s">&#39;now&#39;</span><span class="p">))</span>
+<span class="n">lda</span> <span class="o">=</span> <span class="n">gensim</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">LdaModel</span><span class="p">(</span><span class="n">corpus</span><span class="o">=</span><span class="n">corpus_tfidf</span><span class="p">,</span> <span class="n">id2word</span><span class="o">=</span><span class="n">dictionary</span><span class="p">,</span>
+                             <span class="n">num_topics</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">chunksize</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">iterations</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="s">&#39;now&#39;</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>WARNING:gensim.models.ldamodel:LdaModel.update() called with an empty corpus
+</pre>
+</div>
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2015-09-23 13:24:04
+2015-09-23 13:24:04
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div><div style=display:none>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="k">import</span> <span class="n">stats</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+
+<span class="k">def</span> <span class="nf">topics_html</span><span class="p">(</span><span class="n">topics</span><span class="p">):</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="s">&quot;&lt;table width=100%&gt;&quot;</span>
+    <span class="n">maxent</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">topic</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">topics</span><span class="p">):</span>
+        <span class="n">phi</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="s">&quot;&lt;th colspan={}&gt;&lt;/th&gt;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">topic</span><span class="p">))</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="s">&quot;&lt;tr&gt;&quot;</span>
+        <span class="k">for</span> <span class="n">prob</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">topic</span><span class="p">:</span>
+            <span class="n">s</span> <span class="o">+=</span> <span class="s">&quot;&lt;td&gt;&lt;center&gt;&lt;b&gt;%.2e&lt;/b&gt;&lt;/center&lt;/td&gt;&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">prob</span><span class="p">)</span>
+
+        <span class="n">s</span> <span class="o">+=</span> <span class="s">&quot;&lt;/tr&gt;&lt;tr&gt;&quot;</span>
+        <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">topic</span><span class="p">:</span>
+            <span class="n">s</span> <span class="o">+=</span> <span class="s">&quot;&lt;td class=w_{0}&gt;&lt;center&gt;&lt;b&gt;{0}&lt;/b&gt; / {1}&lt;/center&gt;&lt;/td&gt;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">*</span><span class="n">word</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;/&#39;</span><span class="p">))</span>
+            <span class="n">words</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">word</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;/&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">s</span> <span class="o">+=</span> <span class="s">&quot;&lt;/tr&gt;&quot;</span>
+    <span class="n">s</span> <span class="o">+=</span> <span class="s">&quot;&lt;/table&gt;&quot;</span>
+    <span class="n">css</span> <span class="o">=</span> <span class="s">&quot;&lt;style&gt;&quot;</span> <span class="o">+</span> <span class="s">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s">&quot;.w_%s:hover {background-color: #6f6f6f;}&quot;</span> <span class="o">%</span><span class="k">w</span> for w in words]) + &quot;&lt;/style&gt;&quot;
+    <span class="k">return</span> <span class="n">s</span><span class="p">,</span> <span class="n">css</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+    </div></section><section>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[190]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">s</span><span class="p">,</span> <span class="n">css</span> <span class="o">=</span> <span class="n">topics_html</span><span class="p">(</span><span class="n">lda</span><span class="o">.</span><span class="n">show_topics</span><span class="p">(</span><span class="n">num_topics</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">num_words</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">formatted</span><span class="o">=</span><span class="k">False</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">css</span><span class="p">))</span>
+<span class="n">h</span> <span class="o">=</span> <span class="n">HTML</span><span class="p">(</span><span class="n">s</span><span class="p">);</span> <span class="n">h</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+
+<div class="output_html rendered_html output_subarea ">
+<style>.w_montoya:hover {background-color: #6f6f6f;}.w_dissenting:hover {background-color: #6f6f6f;}.w_wiseass:hover {background-color: #6f6f6f;}.w_sasha:hover {background-color: #6f6f6f;}.w_mckean:hover {background-color: #6f6f6f;}.w_immature:hover {background-color: #6f6f6f;}.w_capitalist:hover {background-color: #6f6f6f;}.w_arquette:hover {background-color: #6f6f6f;}.w_snappy:hover {background-color: #6f6f6f;}.w_bat:hover {background-color: #6f6f6f;}.w_understanding:hover {background-color: #6f6f6f;}.w_pollock:hover {background-color: #6f6f6f;}.w_waste:hover {background-color: #6f6f6f;}.w_place:hover {background-color: #6f6f6f;}.w_withering:hover {background-color: #6f6f6f;}.w_peet:hover {background-color: #6f6f6f;}.w_housekeeper:hover {background-color: #6f6f6f;}.w_kidnap:hover {background-color: #6f6f6f;}.w_cotterill:hover {background-color: #6f6f6f;}.w_ash:hover {background-color: #6f6f6f;}.w_different:hover {background-color: #6f6f6f;}.w_nightlife:hover {background-color: #6f6f6f;}.w_testifying:hover {background-color: #6f6f6f;}.w_bong:hover {background-color: #6f6f6f;}.w_hutchison:hover {background-color: #6f6f6f;}.w_cannibalism:hover {background-color: #6f6f6f;}.w_tennis:hover {background-color: #6f6f6f;}.w_offerings:hover {background-color: #6f6f6f;}.w_stoner:hover {background-color: #6f6f6f;}.w_unwelcome:hover {background-color: #6f6f6f;}.w_springsteen:hover {background-color: #6f6f6f;}.w_reasons:hover {background-color: #6f6f6f;}.w_thrust:hover {background-color: #6f6f6f;}.w_twist:hover {background-color: #6f6f6f;}.w_badalucco:hover {background-color: #6f6f6f;}.w_pedophilia:hover {background-color: #6f6f6f;}</style>
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt output_prompt">Out[190]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<table width=100%><th colspan=6></th><tr><td><center><b>2.72e-05</b></center</td><td><center><b>2.69e-05</b></center</td><td><center><b>2.63e-05</b></center</td><td><center><b>2.61e-05</b></center</td><td><center><b>2.61e-05</b></center</td><td><center><b>2.59e-05</b></center</td></tr><tr><td class=w_understanding><center><b>understanding</b> / VBG</center></td><td class=w_different><center><b>different</b> / NN
+</center></td><td class=w_sasha><center><b>sasha</b> / NN</center></td><td class=w_mckean><center><b>mckean</b> / JJ</center></td><td class=w_offerings><center><b>offerings</b> / NNS</center></td><td class=w_thrust><center><b>thrust</b> / JJ</center></td></tr><th colspan=6></th><tr><td><center><b>2.69e-05</b></center</td><td><center><b>2.60e-05</b></center</td><td><center><b>2.59e-05</b></center</td><td><center><b>2.59e-05</b></center</td><td><center><b>2.59e-05</b></center</td><td><center><b>2.56e-05</b></center</td></tr><tr><td class=w_arquette><center><b>arquette</b> / VBP</center></td><td class=w_unwelcome><center><b>unwelcome</b> / NN</center></td><td class=w_pedophilia><center><b>pedophilia</b> / NN</center></td><td class=w_dissenting><center><b>dissenting</b> / NN</center></td><td class=w_reasons><center><b>reasons</b> / VBZ</center></td><td class=w_snappy><center><b>snappy</b> / JJ</center></td></tr><th colspan=6></th><tr><td><center><b>2.78e-05</b></center</td><td><center><b>2.63e-05</b></center</td><td><center><b>2.60e-05</b></center</td><td><center><b>2.57e-05</b></center</td><td><center><b>2.57e-05</b></center</td><td><center><b>2.56e-05</b></center</td></tr><tr><td class=w_immature><center><b>immature</b> / NN</center></td><td class=w_waste><center><b>waste</b> / VB
+</center></td><td class=w_kidnap><center><b>kidnap</b> / VBP</center></td><td class=w_bong><center><b>bong</b> / JJ</center></td><td class=w_twist><center><b>twist</b> / VB</center></td><td class=w_peet><center><b>peet</b> / VBD</center></td></tr><th colspan=6></th><tr><td><center><b>2.68e-05</b></center</td><td><center><b>2.63e-05</b></center</td><td><center><b>2.62e-05</b></center</td><td><center><b>2.62e-05</b></center</td><td><center><b>2.61e-05</b></center</td><td><center><b>2.60e-05</b></center</td></tr><tr><td class=w_tennis><center><b>tennis</b> / NNS</center></td><td class=w_wiseass><center><b>wiseass</b> / NN</center></td><td class=w_testifying><center><b>testifying</b> / VBG</center></td><td class=w_housekeeper><center><b>housekeeper</b> / VBP</center></td><td class=w_nightlife><center><b>nightlife</b> / VBP</center></td><td class=w_place><center><b>place</b> / VB</center></td></tr><th colspan=6></th><tr><td><center><b>2.73e-05</b></center</td><td><center><b>2.65e-05</b></center</td><td><center><b>2.65e-05</b></center</td><td><center><b>2.63e-05</b></center</td><td><center><b>2.63e-05</b></center</td><td><center><b>2.62e-05</b></center</td></tr><tr><td class=w_badalucco><center><b>badalucco</b> / VBD</center></td><td class=w_montoya><center><b>montoya</b> / NN</center></td><td class=w_capitalist><center><b>capitalist</b> / NN</center></td><td class=w_withering><center><b>withering</b> / NN</center></td><td class=w_cannibalism><center><b>cannibalism</b> / VB</center></td><td class=w_hutchison><center><b>hutchison</b> / NN</center></td></tr><th colspan=6></th><tr><td><center><b>2.62e-05</b></center</td><td><center><b>2.58e-05</b></center</td><td><center><b>2.57e-05</b></center</td><td><center><b>2.57e-05</b></center</td><td><center><b>2.56e-05</b></center</td><td><center><b>2.56e-05</b></center</td></tr><tr><td class=w_springsteen><center><b>springsteen</b> / NN</center></td><td class=w_ash><center><b>ash</b> / NN</center></td><td class=w_pollock><center><b>pollock</b> / VB</center></td><td class=w_cotterill><center><b>cotterill</b> / NN</center></td><td class=w_stoner><center><b>stoner</b> / NN</center></td><td class=w_bat><center><b>bat</b> / NN</center></td></tr></table>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[196]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">lda_enwiki</span> <span class="o">=</span> <span class="n">LdaModel</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s">&#39;enwiki/lda.gensim&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></section><section>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[197]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">s</span><span class="p">,</span> <span class="n">css</span> <span class="o">=</span> <span class="n">topics_html</span><span class="p">(</span><span class="n">lda_enwiki</span><span class="o">.</span><span class="n">show_topics</span><span class="p">(</span><span class="n">num_topics</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">num_words</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">formatted</span><span class="o">=</span><span class="k">False</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">css</span><span class="p">))</span>
+<span class="n">h</span> <span class="o">=</span> <span class="n">HTML</span><span class="p">(</span><span class="n">s</span><span class="p">);</span> <span class="n">h</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+
+<div class="output_html rendered_html output_subarea ">
+<style>.w_game:hover {background-color: #6f6f6f;}.w_aircraft:hover {background-color: #6f6f6f;}.w_law:hover {background-color: #6f6f6f;}.w_song:hover {background-color: #6f6f6f;}.w_bruce:hover {background-color: #6f6f6f;}.w_kuala_lumpur:hover {background-color: #6f6f6f;}.w_species:hover {background-color: #6f6f6f;}.w_liz:hover {background-color: #6f6f6f;}.w_wwe:hover {background-color: #6f6f6f;}.w_smackdown:hover {background-color: #6f6f6f;}.w_water:hover {background-color: #6f6f6f;}.w_people:hover {background-color: #6f6f6f;}.w_square:hover {background-color: #6f6f6f;}.w_amd:hover {background-color: #6f6f6f;}.w_conrad:hover {background-color: #6f6f6f;}.w_whistle:hover {background-color: #6f6f6f;}.w_porsche:hover {background-color: #6f6f6f;}.w_system:hover {background-color: #6f6f6f;}.w_season:hover {background-color: #6f6f6f;}.w_capcom:hover {background-color: #6f6f6f;}.w_use:hover {background-color: #6f6f6f;}.w_state:hover {background-color: #6f6f6f;}.w_wrestling:hover {background-color: #6f6f6f;}.w_router:hover {background-color: #6f6f6f;}.w_tyre:hover {background-color: #6f6f6f;}.w_band:hover {background-color: #6f6f6f;}.w_rand:hover {background-color: #6f6f6f;}.w_service:hover {background-color: #6f6f6f;}.w_→:hover {background-color: #6f6f6f;}.w_album:hover {background-color: #6f6f6f;}.w_city:hover {background-color: #6f6f6f;}.w_film:hover {background-color: #6f6f6f;}.w_government:hover {background-color: #6f6f6f;}</style>
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt output_prompt">Out[197]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<table width=100%><th colspan=6></th><tr><td><center><b>1.72e-02</b></center</td><td><center><b>1.36e-02</b></center</td><td><center><b>1.28e-02</b></center</td><td><center><b>1.23e-02</b></center</td><td><center><b>1.21e-02</b></center</td><td><center><b>1.19e-02</b></center</td></tr><tr><td class=w_router><center><b>router</b> / nn</center></td><td class=w_liz><center><b>liz</b> / nnp</center></td><td class=w_→><center><b>→</b> / nn</center></td><td class=w_whistle><center><b>whistle</b> / vbp</center></td><td class=w_amd><center><b>amd</b> / nnp</center></td><td class=w_conrad><center><b>conrad</b> / nnp</center></td></tr><th colspan=6></th><tr><td><center><b>1.59e-02</b></center</td><td><center><b>1.41e-02</b></center</td><td><center><b>1.18e-02</b></center</td><td><center><b>1.17e-02</b></center</td><td><center><b>1.15e-02</b></center</td><td><center><b>1.06e-02</b></center</td></tr><tr><td class=w_kuala_lumpur><center><b>kuala_lumpur</b> / nnp</center></td><td class=w_porsche><center><b>porsche</b> / nnp</center></td><td class=w_bruce><center><b>bruce</b> / nnp</center></td><td class=w_capcom><center><b>capcom</b> / nnp</center></td><td class=w_tyre><center><b>tyre</b> / nns</center></td><td class=w_rand><center><b>rand</b> / nnp</center></td></tr><th colspan=6></th><tr><td><center><b>2.50e-02</b></center</td><td><center><b>1.83e-02</b></center</td><td><center><b>1.55e-02</b></center</td><td><center><b>1.37e-02</b></center</td><td><center><b>1.19e-02</b></center</td><td><center><b>1.10e-02</b></center</td></tr><tr><td class=w_wwe><center><b>wwe</b> / nnp</center></td><td class=w_square><center><b>square</b> / nns</center></td><td class=w_wrestling><center><b>wrestling</b> / nnp</center></td><td class=w_smackdown><center><b>smackdown</b> / nnp</center></td><td class=w_wrestling><center><b>wrestling</b> / nn</center></td><td class=w_wrestling><center><b>wrestling</b> / nnp</center></td></tr><th colspan=6></th><tr><td><center><b>4.14e-03</b></center</td><td><center><b>2.89e-03</b></center</td><td><center><b>2.57e-03</b></center</td><td><center><b>2.38e-03</b></center</td><td><center><b>2.36e-03</b></center</td><td><center><b>2.34e-03</b></center</td></tr><tr><td class=w_use><center><b>use</b> / vbn</center></td><td class=w_system><center><b>system</b> / nn</center></td><td class=w_water><center><b>water</b> / nn</center></td><td class=w_species><center><b>species</b> / nns</center></td><td class=w_aircraft><center><b>aircraft</b> / nn</center></td><td class=w_use><center><b>use</b> / nn</center></td></tr><th colspan=6></th><tr><td><center><b>2.92e-03</b></center</td><td><center><b>2.70e-03</b></center</td><td><center><b>2.67e-03</b></center</td><td><center><b>2.06e-03</b></center</td><td><center><b>2.00e-03</b></center</td><td><center><b>1.95e-03</b></center</td></tr><tr><td class=w_city><center><b>city</b> / nn</center></td><td class=w_government><center><b>government</b> / nn</center></td><td class=w_state><center><b>state</b> / nn</center></td><td class=w_people><center><b>people</b> / nns</center></td><td class=w_law><center><b>law</b> / nn</center></td><td class=w_service><center><b>service</b> / nn</center></td></tr><th colspan=6></th><tr><td><center><b>4.99e-03</b></center</td><td><center><b>3.96e-03</b></center</td><td><center><b>3.33e-03</b></center</td><td><center><b>3.18e-03</b></center</td><td><center><b>3.11e-03</b></center</td><td><center><b>2.98e-03</b></center</td></tr><tr><td class=w_album><center><b>album</b> / nn</center></td><td class=w_film><center><b>film</b> / nn</center></td><td class=w_band><center><b>band</b> / nn</center></td><td class=w_season><center><b>season</b> / nn</center></td><td class=w_song><center><b>song</b> / nn</center></td><td class=w_game><center><b>game</b> / nn</center></td></tr></table>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -2930,7 +3879,14 @@ fantastic	JJ	2	ccomp
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Deep-Learning-/-language-models">Deep Learning / language models<a class="anchor-link" href="#Deep-Learning-/-language-models">&#182;</a></h1>
+<h1 id="Deep-Learning">Deep Learning<a class="anchor-link" href="#Deep-Learning">&#182;</a></h1><h3 id="State-of-the-art-in-distributional-semantics,-translation,-text-to-speech">State of the art in distributional semantics, translation, text to speech<a class="anchor-link" href="#State-of-the-art-in-distributional-semantics,-translation,-text-to-speech">&#182;</a></h3><h4 id="Socher-on-Recurrent-NNs-for-NLP">Socher on Recurrent NNs for NLP<a class="anchor-link" href="#Socher-on-Recurrent-NNs-for-NLP">&#182;</a></h4><ul>
+<li><a href="https://www.youtube.com/watch?v=tdLmf8t4oqM">https://www.youtube.com/watch?v=tdLmf8t4oqM</a></li>
+</ul>
+<h4 id="The-Unreasonable-Effectiveness-of-Recurrent-Neural-Networks">The Unreasonable Effectiveness of Recurrent Neural Networks<a class="anchor-link" href="#The-Unreasonable-Effectiveness-of-Recurrent-Neural-Networks">&#182;</a></h4><ul>
+<li><a href="https://karpathy.github.io/2015/05/21/rnn-effectiveness/?utm_content=bufferdca1b&amp;utm_medium=social&amp;utm_source=facebook.com&amp;utm_campaign=buffer">https://karpathy.github.io/2015/05/21/rnn-effectiveness/?utm_content=bufferdca1b&amp;utm_medium=social&amp;utm_source=facebook.com&amp;utm_campaign=buffer</a></li>
+<li><a href="http://nbviewer.ipython.org/gist/yoavg/d76121dfde2618422139">http://nbviewer.ipython.org/gist/yoavg/d76121dfde2618422139</a></li>
+</ul>
+
 </div>
 </div>
 </div></section>
