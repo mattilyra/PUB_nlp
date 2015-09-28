@@ -2750,6 +2750,21 @@ rkJggg==
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="kn">import</span> <span class="nn">pandas</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">fdist</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
 </div></section>
     </section><section>
     <section>
@@ -2771,7 +2786,7 @@ rkJggg==
 
 </div>
 </div>
-</div><div class="fragment" data-fragment-index="63">
+</div><div class="fragment" data-fragment-index="64">
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -2824,7 +2839,7 @@ rkJggg==
 </div>
 </div>
 
-</div><div class="fragment" data-fragment-index="65">
+</div><div class="fragment" data-fragment-index="66">
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -2986,7 +3001,7 @@ ADJ 1 interesting
 </div>
 </div>
 
-</div><div class="fragment" data-fragment-index="71">
+</div><div class="fragment" data-fragment-index="72">
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -3001,7 +3016,7 @@ ADJ 1 interesting
 </div>
 
 </div>
-    </div><div class="fragment" data-fragment-index="72">
+    </div><div class="fragment" data-fragment-index="73">
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -3164,7 +3179,7 @@ ADJ 1 interesting
 
 </div>
 </div>
-</div><div class="fragment" data-fragment-index="78">
+</div><div class="fragment" data-fragment-index="79">
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -3315,7 +3330,7 @@ ADJ 1 interesting
 <h1 id="The-yellow-fish-that-swims-in-the-sea">The yellow fish that swims in the sea<a class="anchor-link" href="#The-yellow-fish-that-swims-in-the-sea">&#182;</a></h1>
 </div>
 </div>
-</div><div class="fragment" data-fragment-index="84">
+</div><div class="fragment" data-fragment-index="85">
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -3337,7 +3352,19 @@ ADJ 1 interesting
 <h1 id="I-ate-the-food-with-the-fork">I ate the food with the fork<a class="anchor-link" href="#I-ate-the-food-with-the-fork">&#182;</a></h1><h3 id="I-used-the-fork-to-eat-the-food">I used the fork to eat the food<a class="anchor-link" href="#I-used-the-fork-to-eat-the-food">&#182;</a></h3><h3 id="I-ate-the-food-that-had-the-fork">I ate the food that had the fork<a class="anchor-link" href="#I-ate-the-food-that-had-the-fork">&#182;</a></h3>
 </div>
 </div>
-</div></section><section>
+</div><div class="fragment" data-fragment-index="87">
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="dep_tree3.png" alt=""></p>
+
+</div>
+</div>
+</div>
+    </div></section><section>
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -3347,7 +3374,7 @@ ADJ 1 interesting
 <h1 id="I-thought-Tom-Hanks-was-fantastic">I thought Tom Hanks was fantastic<a class="anchor-link" href="#I-thought-Tom-Hanks-was-fantastic">&#182;</a></h1>
 </div>
 </div>
-</div><div class="fragment" data-fragment-index="87">
+</div><div class="fragment" data-fragment-index="89">
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -3475,7 +3502,7 @@ Kenneth Branagh is able
 </div>
 </div>
 
-</div><div class="fragment" data-fragment-index="92">
+</div><div class="fragment" data-fragment-index="94">
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -3658,7 +3685,7 @@ fantastic.	NNP	2	ccomp
 <h1 id="Topic-Modelling">Topic Modelling<a class="anchor-link" href="#Topic-Modelling">&#182;</a></h1><h3 id="divide-a-corpus-into-topics-based-on-distributional-word-usage">divide a corpus into topics based on distributional word usage<a class="anchor-link" href="#divide-a-corpus-into-topics-based-on-distributional-word-usage">&#182;</a></h3>
 </div>
 </div>
-</div><div class="fragment" data-fragment-index="96">
+</div><div class="fragment" data-fragment-index="98">
     
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -3696,20 +3723,24 @@ fantastic.	NNP	2	ccomp
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[245]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">from</span> <span class="nn">nltk</span> <span class="k">import</span> <span class="n">corpus</span>
 
 <span class="k">def</span> <span class="nf">keep_token</span><span class="p">(</span><span class="n">token</span><span class="p">,</span> <span class="n">tag</span><span class="p">):</span>
     <span class="n">keep</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s">&#39;(NN.*)|(VB.*)|(JJ)&#39;</span><span class="p">,</span> <span class="n">tag</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="k">None</span>
+    <span class="n">keep</span> <span class="o">=</span> <span class="n">keep</span> <span class="ow">and</span> <span class="n">token</span><span class="o">.</span><span class="n">isalpha</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">keep</span>
 
 <span class="c"># preprocessing</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s">&#39;~/Documents/PUB_nlp/lda.webtext.in.txt&#39;</span><span class="p">),</span> <span class="s">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">out</span><span class="p">:</span>
-    <span class="k">for</span> <span class="n">fileid</span> <span class="ow">in</span> <span class="n">corpus</span><span class="o">.</span><span class="n">webtext</span><span class="o">.</span><span class="n">fileids</span><span class="p">():</span>
-        <span class="n">pos_tagged_sents</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">pos_tag_sents</span><span class="p">(</span><span class="n">corpus</span><span class="o">.</span><span class="n">webtext</span><span class="o">.</span><span class="n">sents</span><span class="p">(</span><span class="n">fileid</span><span class="p">))</span>
-        <span class="n">words</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;{}/{}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">tag</span><span class="p">)</span> <span class="k">for</span> <span class="n">sent</span> <span class="ow">in</span> <span class="n">pos_tagged_sents</span> <span class="k">for</span> <span class="n">w</span><span class="p">,</span> <span class="n">tag</span> <span class="ow">in</span> <span class="n">sent</span> <span class="k">if</span> <span class="n">keep_token</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">tag</span><span class="p">)]</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s">&#39;~/Documents/PUB_nlp/lda.moviereviews.in.txt&#39;</span><span class="p">),</span> <span class="s">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">out</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">fileid</span> <span class="ow">in</span> <span class="n">corpus</span><span class="o">.</span><span class="n">movie_reviews</span><span class="o">.</span><span class="n">fileids</span><span class="p">():</span>
+        <span class="n">pos_tagged_sents</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">pos_tag_sents</span><span class="p">(</span><span class="n">corpus</span><span class="o">.</span><span class="n">movie_reviews</span><span class="o">.</span><span class="n">sents</span><span class="p">(</span><span class="n">fileid</span><span class="p">))</span>
+        <span class="n">words</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;{}/{}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">lemmatizer</span><span class="o">.</span><span class="n">lemmatize</span><span class="p">(</span><span class="n">w</span><span class="p">),</span> <span class="n">tag</span><span class="p">)</span>
+                                 <span class="k">for</span> <span class="n">sent</span> <span class="ow">in</span> <span class="n">pos_tagged_sents</span>
+                                 <span class="k">for</span> <span class="n">w</span><span class="p">,</span> <span class="n">tag</span> <span class="ow">in</span> <span class="n">sent</span> <span class="k">if</span> <span class="n">keep_token</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">tag</span><span class="p">)]</span>
         <span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">words</span><span class="p">))</span>
         <span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&#39;</span><span class="se">\n</span><span class="s">&#39;</span><span class="p">)</span>
 </pre></div>
@@ -3718,11 +3749,11 @@ fantastic.	NNP	2	ccomp
 </div>
 </div>
 
-</div><div class="fragment" data-fragment-index="99">
+</div><div class="fragment" data-fragment-index="101">
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[184]:</div>
+<div class="prompt input_prompt">In&nbsp;[246]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c"># you can run shell commands in notebook - how awesome is that?</span>
@@ -3752,7 +3783,7 @@ fantastic.	NNP	2	ccomp
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[185]:</div>
+<div class="prompt input_prompt">In&nbsp;[248]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c"># you can run shell commands in notebook - how awesome is that?</span>
@@ -3769,7 +3800,7 @@ fantastic.	NNP	2	ccomp
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>plot/NN teen/NNS couples/NNS go/VBP church/NN party/NN drink/VBP drive/JJ get/VBP accident/NN guys/NNS dies/VBZ girlfriend/NN continues/VBZ see/VB life/NN has/VBZ nightmares/NNS s/NNS deal/NN watch/NN movie/NN sorta/NN find/NN critique/NN mind/NN fuck/NN movie/NN teen/NN generation/NN touches/VBZ cool/JJ idea/NN presents/NNS bad/JJ package/NN is/VBZ makes/VBZ review/NN harder/JJR write/VB applaud/VBP films/NNS attempt/NN break/VB mold/NN mess/NN head/NN such/JJ (/NN lost/VBD highway/NN are/VBP good/JJ bad/JJ ways/NNS making/VBG types/NNS films/NNS folks/NNS didn/VBP t/NN snag/NN seem/VBP have/VB taken/VBN neat/JJ concept/NN executed/VBN are/VBP problems/NNS movie/NN main/JJ problem/NN is/VBZ s/NNS jumbled/VBN starts/VBZ normal/JJ &quot;/NN downshifts/VBZ &quot;/NN fantasy/NN world/NN audience/NN member/NN have/VBP idea/NN s/VBZ going/VBG are/VBP dreams/NNS are/VBP characters/NNS coming/VBG dead/JJ are/VBP others/NNS look/NN dead/JJ are/VBP strange/NN apparitions/NNS are/VBP disappearances/NNS are/VBP looooot/NN chase/NN scenes/NNS are/VBP tons/NNS weird/JJ things/NNS happen/VB most/JJS is/VBZ explained/VBN don/JJ t/NN mind/NN trying/VBG unravel/VB film/NN does/VBZ is/VBZ give/JJ me/NN same/JJ clue/NN get/VBP kind/JJ fed/JJ while/NN is/VBZ film/NN s/NNS biggest/JJS problem/NN s/NNS got/VBD big/JJ secret/NN hide/VB seems/VBZ want/VB hide/VB final/JJ minutes/NNS do/VBP make/VB things/NNS entertaining/VBG thrilling/VBG engaging/VBG meantime/NN sad/JJ part/NN is/VBZ arrow/NN dig/JJ flicks/NNS figured/VBD half/NN way/NN point/NN strangeness/NN did/VBD start/VB make/VB little/JJ bit/NN sense/NN didn/VBP t/NN make/NN film/NN entertaining/VBG guess/VBP bottom/NN line/NN movies/NNS is/VBZ make/VB sure/JJ audience/NN is/VBZ are/VBP given/VBN secret/NN password/NN enter/VB world/NN understanding/NN mean/VBP showing/VBG melissa/NN sagemiller/NN running/VBG visions/NNS minutes/NNS movie/NN is/VBZ lazy/JJ !/NN okay/NN get/VBP are/VBP people/NNS chasing/VBG don/VBP t/NN know/VB are/VBP do/VBP need/VBP see/VB giving/VBG different/JJ scenes/NNS offering/VBG further/JJ insight/NN strangeness/NN going/VBG movie/NN studio/NN took/VBD film/NN director/NN chopped/VBD shows/VBZ &apos;/VB ve/JJ been/VBN decent/JJ teen/NN mind/NN fuck/NN movie/NN guess/VBP suits/NNS decided/VBD turning/VBG music/JJ video/NN little/JJ edge/NN make/VB sense/JJ actors/NNS are/VBP good/JJ most/JJS part/NN wes/NNS bentley/NN seemed/VBD be/VB playing/VBG exact/JJ same/NN character/NN did/VBD american/NN beauty/NN new/JJ neighborhood/NN biggest/NN kudos/NNS go/VBP sagemiller/VB holds/NNS her/VBP own/JJ entire/JJ film/NN has/VBZ feeling/VBG character/JJR s/NNS unraveling/VBG overall/JJ film/NN doesn/NN t/NN stick/NN doesn/VBP t/NN entertain/NN s/VBZ confusing/VBG excites/VBZ feels/VBZ redundant/JJ most/JJS runtime/NN cool/JJ ending/VBG explanation/NN craziness/NN came/VBD oh/NN way/NN is/VBZ horror/NN slasher/NN flick/NN s/NNS packaged/VBD look/VB way/NN someone/NN is/VBZ assuming/VBG genre/NN is/VBZ hot/JJ kids/NNS wrapped/VBD production/NN years/NNS has/VBZ been/VBN sitting/VBG shelves/NNS whatever/NN skip/NN s/NNS joblo/VBP coming/VBG nightmare/NN elm/NN street/NN blair/JJ witch/NN crow/NN crow/NN salvation/NN lost/VBD highway/NN others/NNS (/VBP stir/JJ echoes/NNS
+<pre>moviemaking/VBG is/VBZ lot/NN being/VBG general/JJ manager/NN nfl/NN team/NN post/NN salary/NN cap/NN era/NN ve/VBP got/VBN know/VB allocate/VB resource/NNS dollar/NN spent/NN free/JJ agent/NN defensive/JJ tackle/NN is/VBZ le/JJR dollar/NN spend/VB linebacker/NNS safety/NNS center/NNS nfl/NN lead/NNS team/NNS detroit/NN lion/NNS superstar/NN running/VBG huge/JJ contract/NN field/VB guy/NNS named/VBD herb/NN block/VB movie/NNS end/VBP film/NNS spawn/NN huge/JJ special/JJ effect/NNS budget/NN money/NN hire/VB recognizable/JJ actor/NNS jackie/NN chan/VBD is/VBZ barry/NN sander/NNS moviemaking/VBG spin/VBZ dart/NNS screen/NN sander/NNS cutting/VBG defensive/JJ line/NN watching/VBG jackie/NN operation/NN condor/NN drive/VBZ motorcycle/NN crowded/VBN street/NNS madrid/JJ fleeing/VBG armada/NN pursuer/NNS identical/JJ black/NN compact/NN car/NNS is/VBZ reminiscent/JJ sander/NNS running/VBG daylight/JJ chicago/NNP bear/VBZ hot/JJ pursuit/NN sander/NNS doesn/VBP t/NN have/VBP worry/VB rescuing/VBG runaway/NN baby/NN carriage/NNS lion/NNS star/NN jackie/NN doesn/NN t/NN have/VBP anybody/NN block/VB cent/NN s/NNS invested/VBD jackie/NN chan/NN movie/NN go/VBZ stunt/NNS chan/NN doe/VBZ own/JJ stunt/NNS rest/NN money/NN go/VBZ pay/VB hospital/NN bill/NNS leaf/VBZ cent/NNS pay/VB thing/NNS director/NNS directs/NNS script/NNS dubbing/VBG supporting/VBG character/NNS mention/VB hideous/JJ title/NN sequence/NN explains/VBZ movie/NN wa/VBD shot/JJ odd/JJ place/NNS morocco/NN spain/NN chan/VBD s/NNS release/VB country/NN rumble/JJ bronx/NN wa/VBD set/VBN new/JJ york/NN wa/VBD filmed/VBN vancouver/NN chase/NN scene/NNS canadian/JJ rockies/NNS are/VBP visible/JJ heck/NN jackie/NN doesn/NN t/NN have/VB enough/JJ money/NN haircut/NN look/VBZ much/JJ le/NN personal/JJ hairstylist/NN condor/NN play/NNS same/JJ character/NN s/NNS played/VBN mixture/NN bruce/NN lee/NN tim/NN allen/NN master/NN kung/JJ fu/NN slapstick/NN fu/NN jackie/NN is/VBZ sent/VBN un/NN retrieve/VB cache/NN lost/NN nazi/NN gold/NN north/JJ african/NN desert/NN is/VBZ chased/VBN horde/NN neo/NN nazi/NN sympathizer/NNS stereotypical/JJ arab/NNS thing/NNS like/VBP jackie/NN movie/NNS political/JJ correctness/NN is/VBZ joined/VBN woman/NNS have/VBP do/VB scream/NN jackie/NN save/VBP misuse/VB firearm/NNS villain/NN is/VBZ old/JJ nazi/NN leg/NNS were/VBD broken/VBN secret/NN base/NN ha/VBZ be/VB carried/VBN s/NNS pathetic/JJ evil/JJ en/NN route/NN have/VBP extended/VBN motorcycle/NN chase/NN scene/NN hilarious/JJ fight/NN moroccan/NN version/NN motel/NN neo/NN nazi/NNS confrontation/NNS savage/NN native/NNS secret/NN desert/NN base/NN is/VBZ long/JJ chop/NN socky/JJ sequence/NN followed/VBN film/NN s/NNS centerpiece/VBP wind/NN tunnel/NN fight/NN s/VBZ better/JJR face/NN is/VBZ money/NN wa/VBD spent/VBN choreographed/VBN kung/NN fu/NN sequence/NNS giant/JJ kevlar/NN hamster/NN ball/NNS smashed/JJ crate/NNS banana/NNS scorpion/NNS gaping/NN hole/NNS plot/NN villain/NN s/NNS leg/NNS were/VBD broken/VBN did/VBD escape/NN secret/NN nazi/NN base/NN didn/NN t/NN take/VBP key/JJ don/NN t/NN worry/NN production/NN value/NNS japanese/NNS girl/NN wa/VBD doing/VBG hitchhiking/NN sahara/NN go/VBP see/VB movie/NN operation/NN condor/NN ha/VBZ pretentions/NNS being/VBG raider/NNS lost/JJS ark/NN knockoff/NN wonder/NNS jackie/NN do/VB raider/NNS franchise/VBP blocking/VBG lawrence/NN kazdan/NN screenplay/NN john/NN williams/NNS score/VBP spielberg/NN directing/VBG george/NN lucas/NNS producing/VBG condor/NN be/VB movie/NN ve/VBP got/VBN go/VB ve/NN got/VBD ve/NN got/VBD jackie/NN is/VBZ something/NN special/JJ talent/NN mainstream/NN hollywood/VBD utilize/VB
 </pre>
 </div>
 </div>
@@ -3781,7 +3812,7 @@ fantastic.	NNP	2	ccomp
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[186]:</div>
+<div class="prompt input_prompt">In&nbsp;[266]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="kn">import</span> <span class="nn">gensim</span>
@@ -3793,18 +3824,18 @@ fantastic.	NNP	2	ccomp
     <span class="n">lda_corpus</span> <span class="o">=</span> <span class="p">(</span><span class="n">dictionary</span><span class="o">.</span><span class="n">doc2bow</span><span class="p">(</span><span class="n">bow</span><span class="p">,</span> <span class="n">allow_update</span><span class="o">=</span><span class="k">True</span><span class="p">)</span> <span class="k">for</span> <span class="n">bow</span> <span class="ow">in</span> <span class="n">bow_stream</span><span class="p">)</span>
     <span class="n">gensim</span><span class="o">.</span><span class="n">corpora</span><span class="o">.</span><span class="n">MmCorpus</span><span class="o">.</span><span class="n">serialize</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s">&#39;~/Documents/PUB_nlp/lda.moviereviews.in.mm&#39;</span><span class="p">),</span> <span class="n">lda_corpus</span><span class="p">)</span>
 
-<span class="n">corpus</span> <span class="o">=</span> <span class="n">gensim</span><span class="o">.</span><span class="n">corpora</span><span class="o">.</span><span class="n">MmCorpus</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s">&#39;~/Documents/PUB_nlp/lda.moviereviews.in.mm&#39;</span><span class="p">))</span>
+<span class="n">lda_corpus</span> <span class="o">=</span> <span class="n">gensim</span><span class="o">.</span><span class="n">corpora</span><span class="o">.</span><span class="n">MmCorpus</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s">&#39;~/Documents/PUB_nlp/lda.moviereviews.in.mm&#39;</span><span class="p">))</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-</div><div class="fragment" data-fragment-index="102">
+</div><div class="fragment" data-fragment-index="104">
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[187]:</div>
+<div class="prompt input_prompt">In&nbsp;[267]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="nb">list</span><span class="p">(</span><span class="n">dictionary</span><span class="o">.</span><span class="n">items</span><span class="p">())[:</span><span class="mi">10</span><span class="p">]</span>
@@ -3818,20 +3849,20 @@ fantastic.	NNP	2	ccomp
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[187]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[267]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[(35666, &apos;partisanship/NN&apos;),
- (27560, &apos;dukakis/NNS&apos;),
- (7091, &apos;investigated/VBN&apos;),
- (22555, &apos;beefy/NN&apos;),
- (37245, &apos;repugnant/JJ&apos;),
- (42138, &apos;aboard/VBN&apos;),
- (21205, &apos;smits/NNS&apos;),
- (7574, &apos;sister/NN&apos;),
- (6094, &apos;biggs/NNS&apos;),
- (19769, &apos;impenetrable/JJ&apos;)]</pre>
+<pre>[(32048, &apos;lend/VB&apos;),
+ (19093, &apos;circumcision/NN&apos;),
+ (45821, &apos;wandering/JJ&apos;),
+ (31249, &apos;kristen/VBP&apos;),
+ (30694, &apos;request/NN&apos;),
+ (17072, &apos;exalts/NNS&apos;),
+ (11989, &apos;spotty/JJ&apos;),
+ (22098, &apos;hardcore/VBP&apos;),
+ (20559, &apos;mindset/VBP&apos;),
+ (31951, &apos;synonym/NN&apos;)]</pre>
 </div>
 
 </div>
@@ -3840,15 +3871,15 @@ fantastic.	NNP	2	ccomp
 </div>
 
 </div>
-    </div><div class="fragment" data-fragment-index="103">
+    </div><div class="fragment" data-fragment-index="105">
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[188]:</div>
+<div class="prompt input_prompt">In&nbsp;[276]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c"># train a TFIDF model</span>
-<span class="n">tfidf</span> <span class="o">=</span> <span class="n">gensim</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">TfidfModel</span><span class="p">(</span><span class="n">corpus</span><span class="o">=</span><span class="k">None</span><span class="p">,</span> <span class="n">dictionary</span><span class="o">=</span><span class="n">dictionary</span><span class="p">)</span>
+<span class="n">tfidf</span> <span class="o">=</span> <span class="n">gensim</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">TfidfModel</span><span class="p">(</span><span class="n">corpus</span><span class="o">=</span><span class="k">None</span><span class="p">,</span> <span class="n">dictionary</span><span class="o">=</span><span class="n">dictionary</span><span class="p">,</span> <span class="n">normalize</span><span class="o">=</span><span class="k">False</span><span class="p">)</span>
 <span class="n">corpus_tfidf</span> <span class="o">=</span> <span class="n">tfidf</span><span class="p">[</span><span class="n">lda_corpus</span><span class="p">]</span>
 </pre></div>
 
@@ -3861,14 +3892,14 @@ fantastic.	NNP	2	ccomp
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[189]:</div>
+<div class="prompt input_prompt">In&nbsp;[282]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c"># train LDA model</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="s">&#39;now&#39;</span><span class="p">))</span>
 <span class="n">lda</span> <span class="o">=</span> <span class="n">gensim</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">LdaModel</span><span class="p">(</span><span class="n">corpus</span><span class="o">=</span><span class="n">corpus_tfidf</span><span class="p">,</span> <span class="n">id2word</span><span class="o">=</span><span class="n">dictionary</span><span class="p">,</span>
-                             <span class="n">num_topics</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">chunksize</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">iterations</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+                             <span class="n">num_topics</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">chunksize</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">iterations</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="s">&#39;now&#39;</span><span class="p">))</span>
 </pre></div>
 
@@ -3881,16 +3912,9 @@ fantastic.	NNP	2	ccomp
 
 
 <div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>WARNING:gensim.models.ldamodel:LdaModel.update() called with an empty corpus
-</pre>
-</div>
-</div>
-
-<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>2015-09-23 13:24:04
-2015-09-23 13:24:04
+<pre>2015-09-28 18:43:12
+2015-09-28 18:43:31
 </pre>
 </div>
 </div>
@@ -3902,7 +3926,7 @@ fantastic.	NNP	2	ccomp
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[283]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -3939,7 +3963,7 @@ fantastic.	NNP	2	ccomp
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[190]:</div>
+<div class="prompt input_prompt">In&nbsp;[284]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">s</span><span class="p">,</span> <span class="n">css</span> <span class="o">=</span> <span class="n">topics_html</span><span class="p">(</span><span class="n">lda</span><span class="o">.</span><span class="n">show_topics</span><span class="p">(</span><span class="n">num_topics</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">num_words</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">formatted</span><span class="o">=</span><span class="k">False</span><span class="p">))</span>
@@ -3958,17 +3982,15 @@ fantastic.	NNP	2	ccomp
 <div class="output_area"><div class="prompt"></div>
 
 <div class="output_html rendered_html output_subarea ">
-<style>.w_montoya:hover {background-color: #6f6f6f;}.w_dissenting:hover {background-color: #6f6f6f;}.w_wiseass:hover {background-color: #6f6f6f;}.w_sasha:hover {background-color: #6f6f6f;}.w_mckean:hover {background-color: #6f6f6f;}.w_immature:hover {background-color: #6f6f6f;}.w_capitalist:hover {background-color: #6f6f6f;}.w_arquette:hover {background-color: #6f6f6f;}.w_snappy:hover {background-color: #6f6f6f;}.w_bat:hover {background-color: #6f6f6f;}.w_understanding:hover {background-color: #6f6f6f;}.w_pollock:hover {background-color: #6f6f6f;}.w_waste:hover {background-color: #6f6f6f;}.w_place:hover {background-color: #6f6f6f;}.w_withering:hover {background-color: #6f6f6f;}.w_peet:hover {background-color: #6f6f6f;}.w_housekeeper:hover {background-color: #6f6f6f;}.w_kidnap:hover {background-color: #6f6f6f;}.w_cotterill:hover {background-color: #6f6f6f;}.w_ash:hover {background-color: #6f6f6f;}.w_different:hover {background-color: #6f6f6f;}.w_nightlife:hover {background-color: #6f6f6f;}.w_testifying:hover {background-color: #6f6f6f;}.w_bong:hover {background-color: #6f6f6f;}.w_hutchison:hover {background-color: #6f6f6f;}.w_cannibalism:hover {background-color: #6f6f6f;}.w_tennis:hover {background-color: #6f6f6f;}.w_offerings:hover {background-color: #6f6f6f;}.w_stoner:hover {background-color: #6f6f6f;}.w_unwelcome:hover {background-color: #6f6f6f;}.w_springsteen:hover {background-color: #6f6f6f;}.w_reasons:hover {background-color: #6f6f6f;}.w_thrust:hover {background-color: #6f6f6f;}.w_twist:hover {background-color: #6f6f6f;}.w_badalucco:hover {background-color: #6f6f6f;}.w_pedophilia:hover {background-color: #6f6f6f;}</style>
+<style>.w_joe:hover {background-color: #6f6f6f;}.w_van:hover {background-color: #6f6f6f;}.w_disney:hover {background-color: #6f6f6f;}.w_wild:hover {background-color: #6f6f6f;}.w_ape:hover {background-color: #6f6f6f;}.w_shane:hover {background-color: #6f6f6f;}.w_killer:hover {background-color: #6f6f6f;}.w_stuart:hover {background-color: #6f6f6f;}.w_action:hover {background-color: #6f6f6f;}.w_tarzan:hover {background-color: #6f6f6f;}.w_jackie:hover {background-color: #6f6f6f;}.w_dillon:hover {background-color: #6f6f6f;}.w_girl:hover {background-color: #6f6f6f;}.w_mulan:hover {background-color: #6f6f6f;}.w_lucas:hover {background-color: #6f6f6f;}.w_robin:hover {background-color: #6f6f6f;}.w_myers:hover {background-color: #6f6f6f;}.w_war:hover {background-color: #6f6f6f;}.w_williams:hover {background-color: #6f6f6f;}.w_batman:hover {background-color: #6f6f6f;}.w_star:hover {background-color: #6f6f6f;}.w_spawn:hover {background-color: #6f6f6f;}.w_godzilla:hover {background-color: #6f6f6f;}.w_witch:hover {background-color: #6f6f6f;}.w_horror:hover {background-color: #6f6f6f;}.w_hong:hover {background-color: #6f6f6f;}.w_frank:hover {background-color: #6f6f6f;}.w_erin:hover {background-color: #6f6f6f;}.w_blair:hover {background-color: #6f6f6f;}.w_seagal:hover {background-color: #6f6f6f;}.w_marie:hover {background-color: #6f6f6f;}.w_menace:hover {background-color: #6f6f6f;}.w_toy:hover {background-color: #6f6f6f;}.w_scream:hover {background-color: #6f6f6f;}.w_murphy:hover {background-color: #6f6f6f;}.w_trooper:hover {background-color: #6f6f6f;}</style>
 </div>
 
 </div>
 
-<div class="output_area"><div class="prompt output_prompt">Out[190]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[284]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
-<table width=100%><th colspan=6></th><tr><td><center><b>2.72e-05</b></center</td><td><center><b>2.69e-05</b></center</td><td><center><b>2.63e-05</b></center</td><td><center><b>2.61e-05</b></center</td><td><center><b>2.61e-05</b></center</td><td><center><b>2.59e-05</b></center</td></tr><tr><td class=w_understanding><center><b>understanding</b> / VBG</center></td><td class=w_different><center><b>different</b> / NN
-</center></td><td class=w_sasha><center><b>sasha</b> / NN</center></td><td class=w_mckean><center><b>mckean</b> / JJ</center></td><td class=w_offerings><center><b>offerings</b> / NNS</center></td><td class=w_thrust><center><b>thrust</b> / JJ</center></td></tr><th colspan=6></th><tr><td><center><b>2.69e-05</b></center</td><td><center><b>2.60e-05</b></center</td><td><center><b>2.59e-05</b></center</td><td><center><b>2.59e-05</b></center</td><td><center><b>2.59e-05</b></center</td><td><center><b>2.56e-05</b></center</td></tr><tr><td class=w_arquette><center><b>arquette</b> / VBP</center></td><td class=w_unwelcome><center><b>unwelcome</b> / NN</center></td><td class=w_pedophilia><center><b>pedophilia</b> / NN</center></td><td class=w_dissenting><center><b>dissenting</b> / NN</center></td><td class=w_reasons><center><b>reasons</b> / VBZ</center></td><td class=w_snappy><center><b>snappy</b> / JJ</center></td></tr><th colspan=6></th><tr><td><center><b>2.78e-05</b></center</td><td><center><b>2.63e-05</b></center</td><td><center><b>2.60e-05</b></center</td><td><center><b>2.57e-05</b></center</td><td><center><b>2.57e-05</b></center</td><td><center><b>2.56e-05</b></center</td></tr><tr><td class=w_immature><center><b>immature</b> / NN</center></td><td class=w_waste><center><b>waste</b> / VB
-</center></td><td class=w_kidnap><center><b>kidnap</b> / VBP</center></td><td class=w_bong><center><b>bong</b> / JJ</center></td><td class=w_twist><center><b>twist</b> / VB</center></td><td class=w_peet><center><b>peet</b> / VBD</center></td></tr><th colspan=6></th><tr><td><center><b>2.68e-05</b></center</td><td><center><b>2.63e-05</b></center</td><td><center><b>2.62e-05</b></center</td><td><center><b>2.62e-05</b></center</td><td><center><b>2.61e-05</b></center</td><td><center><b>2.60e-05</b></center</td></tr><tr><td class=w_tennis><center><b>tennis</b> / NNS</center></td><td class=w_wiseass><center><b>wiseass</b> / NN</center></td><td class=w_testifying><center><b>testifying</b> / VBG</center></td><td class=w_housekeeper><center><b>housekeeper</b> / VBP</center></td><td class=w_nightlife><center><b>nightlife</b> / VBP</center></td><td class=w_place><center><b>place</b> / VB</center></td></tr><th colspan=6></th><tr><td><center><b>2.73e-05</b></center</td><td><center><b>2.65e-05</b></center</td><td><center><b>2.65e-05</b></center</td><td><center><b>2.63e-05</b></center</td><td><center><b>2.63e-05</b></center</td><td><center><b>2.62e-05</b></center</td></tr><tr><td class=w_badalucco><center><b>badalucco</b> / VBD</center></td><td class=w_montoya><center><b>montoya</b> / NN</center></td><td class=w_capitalist><center><b>capitalist</b> / NN</center></td><td class=w_withering><center><b>withering</b> / NN</center></td><td class=w_cannibalism><center><b>cannibalism</b> / VB</center></td><td class=w_hutchison><center><b>hutchison</b> / NN</center></td></tr><th colspan=6></th><tr><td><center><b>2.62e-05</b></center</td><td><center><b>2.58e-05</b></center</td><td><center><b>2.57e-05</b></center</td><td><center><b>2.57e-05</b></center</td><td><center><b>2.56e-05</b></center</td><td><center><b>2.56e-05</b></center</td></tr><tr><td class=w_springsteen><center><b>springsteen</b> / NN</center></td><td class=w_ash><center><b>ash</b> / NN</center></td><td class=w_pollock><center><b>pollock</b> / VB</center></td><td class=w_cotterill><center><b>cotterill</b> / NN</center></td><td class=w_stoner><center><b>stoner</b> / NN</center></td><td class=w_bat><center><b>bat</b> / NN</center></td></tr></table>
+<table width=100%><th colspan=6></th><tr><td><center><b>2.52e-03</b></center</td><td><center><b>2.38e-03</b></center</td><td><center><b>2.07e-03</b></center</td><td><center><b>1.73e-03</b></center</td><td><center><b>1.52e-03</b></center</td><td><center><b>1.30e-03</b></center</td></tr><tr><td class=w_mulan><center><b>mulan</b> / NN</center></td><td class=w_star><center><b>star</b> / NN</center></td><td class=w_war><center><b>war</b> / NNS</center></td><td class=w_lucas><center><b>lucas</b> / NNS</center></td><td class=w_marie><center><b>marie</b> / NN</center></td><td class=w_menace><center><b>menace</b> / NN</center></td></tr><th colspan=6></th><tr><td><center><b>3.52e-03</b></center</td><td><center><b>2.62e-03</b></center</td><td><center><b>2.13e-03</b></center</td><td><center><b>1.97e-03</b></center</td><td><center><b>1.95e-03</b></center</td><td><center><b>1.89e-03</b></center</td></tr><tr><td class=w_disney><center><b>disney</b> / NN</center></td><td class=w_toy><center><b>toy</b> / NN</center></td><td class=w_tarzan><center><b>tarzan</b> / NN</center></td><td class=w_ape><center><b>ape</b> / NNS</center></td><td class=w_murphy><center><b>murphy</b> / NN</center></td><td class=w_joe><center><b>joe</b> / NN</center></td></tr><th colspan=6></th><tr><td><center><b>2.53e-03</b></center</td><td><center><b>2.44e-03</b></center</td><td><center><b>2.44e-03</b></center</td><td><center><b>1.83e-03</b></center</td><td><center><b>1.75e-03</b></center</td><td><center><b>1.50e-03</b></center</td></tr><tr><td class=w_batman><center><b>batman</b> / NN</center></td><td class=w_robin><center><b>robin</b> / NN</center></td><td class=w_witch><center><b>witch</b> / NN</center></td><td class=w_williams><center><b>williams</b> / NNS</center></td><td class=w_blair><center><b>blair</b> / NN</center></td><td class=w_frank><center><b>frank</b> / NN</center></td></tr><th colspan=6></th><tr><td><center><b>3.37e-03</b></center</td><td><center><b>3.27e-03</b></center</td><td><center><b>3.15e-03</b></center</td><td><center><b>2.39e-03</b></center</td><td><center><b>2.27e-03</b></center</td><td><center><b>1.89e-03</b></center</td></tr><tr><td class=w_horror><center><b>horror</b> / NN</center></td><td class=w_scream><center><b>scream</b> / NN</center></td><td class=w_killer><center><b>killer</b> / NN</center></td><td class=w_godzilla><center><b>godzilla</b> / NN</center></td><td class=w_seagal><center><b>seagal</b> / JJ</center></td><td class=w_trooper><center><b>trooper</b> / NNS</center></td></tr><th colspan=6></th><tr><td><center><b>2.42e-03</b></center</td><td><center><b>2.37e-03</b></center</td><td><center><b>1.84e-03</b></center</td><td><center><b>1.75e-03</b></center</td><td><center><b>1.62e-03</b></center</td><td><center><b>1.61e-03</b></center</td></tr><tr><td class=w_jackie><center><b>jackie</b> / NN</center></td><td class=w_action><center><b>action</b> / NN</center></td><td class=w_wild><center><b>wild</b> / NN</center></td><td class=w_van><center><b>van</b> / NN</center></td><td class=w_erin><center><b>erin</b> / NN</center></td><td class=w_hong><center><b>hong</b> / JJ</center></td></tr><th colspan=6></th><tr><td><center><b>3.37e-03</b></center</td><td><center><b>2.74e-03</b></center</td><td><center><b>2.10e-03</b></center</td><td><center><b>1.84e-03</b></center</td><td><center><b>1.64e-03</b></center</td><td><center><b>1.62e-03</b></center</td></tr><tr><td class=w_spawn><center><b>spawn</b> / NN</center></td><td class=w_girl><center><b>girl</b> / NNS</center></td><td class=w_myers><center><b>myers</b> / NNS</center></td><td class=w_dillon><center><b>dillon</b> / NN</center></td><td class=w_shane><center><b>shane</b> / NN</center></td><td class=w_stuart><center><b>stuart</b> / NN</center></td></tr></table>
 </div>
 
 </div>
@@ -3976,14 +3998,26 @@ fantastic.	NNP	2	ccomp
 </div>
 </div>
 
-</div></section><section>
+</div><div style=display:none>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+
+</div>
+</div>
+</div>
+    </div></section><section>
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[196]:</div>
+<div class="prompt input_prompt">In&nbsp;[257]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="n">lda_enwiki</span> <span class="o">=</span> <span class="n">LdaModel</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s">&#39;enwiki/lda.gensim&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span class="n">lda_enwiki</span> <span class="o">=</span> <span class="n">gensim</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">LdaModel</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s">&#39;enwiki/lda.gensim&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -3994,7 +4028,7 @@ fantastic.	NNP	2	ccomp
     
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[197]:</div>
+<div class="prompt input_prompt">In&nbsp;[271]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">s</span><span class="p">,</span> <span class="n">css</span> <span class="o">=</span> <span class="n">topics_html</span><span class="p">(</span><span class="n">lda_enwiki</span><span class="o">.</span><span class="n">show_topics</span><span class="p">(</span><span class="n">num_topics</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">num_words</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">formatted</span><span class="o">=</span><span class="k">False</span><span class="p">))</span>
@@ -4013,12 +4047,12 @@ fantastic.	NNP	2	ccomp
 <div class="output_area"><div class="prompt"></div>
 
 <div class="output_html rendered_html output_subarea ">
-<style>.w_game:hover {background-color: #6f6f6f;}.w_aircraft:hover {background-color: #6f6f6f;}.w_law:hover {background-color: #6f6f6f;}.w_song:hover {background-color: #6f6f6f;}.w_bruce:hover {background-color: #6f6f6f;}.w_kuala_lumpur:hover {background-color: #6f6f6f;}.w_species:hover {background-color: #6f6f6f;}.w_liz:hover {background-color: #6f6f6f;}.w_wwe:hover {background-color: #6f6f6f;}.w_smackdown:hover {background-color: #6f6f6f;}.w_water:hover {background-color: #6f6f6f;}.w_people:hover {background-color: #6f6f6f;}.w_square:hover {background-color: #6f6f6f;}.w_amd:hover {background-color: #6f6f6f;}.w_conrad:hover {background-color: #6f6f6f;}.w_whistle:hover {background-color: #6f6f6f;}.w_porsche:hover {background-color: #6f6f6f;}.w_system:hover {background-color: #6f6f6f;}.w_season:hover {background-color: #6f6f6f;}.w_capcom:hover {background-color: #6f6f6f;}.w_use:hover {background-color: #6f6f6f;}.w_state:hover {background-color: #6f6f6f;}.w_wrestling:hover {background-color: #6f6f6f;}.w_router:hover {background-color: #6f6f6f;}.w_tyre:hover {background-color: #6f6f6f;}.w_band:hover {background-color: #6f6f6f;}.w_rand:hover {background-color: #6f6f6f;}.w_service:hover {background-color: #6f6f6f;}.w_→:hover {background-color: #6f6f6f;}.w_album:hover {background-color: #6f6f6f;}.w_city:hover {background-color: #6f6f6f;}.w_film:hover {background-color: #6f6f6f;}.w_government:hover {background-color: #6f6f6f;}</style>
+<style>.w_amd:hover {background-color: #6f6f6f;}.w_species:hover {background-color: #6f6f6f;}.w_square:hover {background-color: #6f6f6f;}.w_state:hover {background-color: #6f6f6f;}.w_game:hover {background-color: #6f6f6f;}.w_service:hover {background-color: #6f6f6f;}.w_government:hover {background-color: #6f6f6f;}.w_smackdown:hover {background-color: #6f6f6f;}.w_conrad:hover {background-color: #6f6f6f;}.w_wrestling:hover {background-color: #6f6f6f;}.w_season:hover {background-color: #6f6f6f;}.w_→:hover {background-color: #6f6f6f;}.w_wwe:hover {background-color: #6f6f6f;}.w_use:hover {background-color: #6f6f6f;}.w_capcom:hover {background-color: #6f6f6f;}.w_film:hover {background-color: #6f6f6f;}.w_rand:hover {background-color: #6f6f6f;}.w_aircraft:hover {background-color: #6f6f6f;}.w_album:hover {background-color: #6f6f6f;}.w_system:hover {background-color: #6f6f6f;}.w_liz:hover {background-color: #6f6f6f;}.w_whistle:hover {background-color: #6f6f6f;}.w_water:hover {background-color: #6f6f6f;}.w_people:hover {background-color: #6f6f6f;}.w_law:hover {background-color: #6f6f6f;}.w_band:hover {background-color: #6f6f6f;}.w_city:hover {background-color: #6f6f6f;}.w_tyre:hover {background-color: #6f6f6f;}.w_song:hover {background-color: #6f6f6f;}.w_porsche:hover {background-color: #6f6f6f;}.w_router:hover {background-color: #6f6f6f;}.w_bruce:hover {background-color: #6f6f6f;}.w_kuala_lumpur:hover {background-color: #6f6f6f;}</style>
 </div>
 
 </div>
 
-<div class="output_area"><div class="prompt output_prompt">Out[197]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[271]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <table width=100%><th colspan=6></th><tr><td><center><b>1.72e-02</b></center</td><td><center><b>1.36e-02</b></center</td><td><center><b>1.28e-02</b></center</td><td><center><b>1.23e-02</b></center</td><td><center><b>1.21e-02</b></center</td><td><center><b>1.19e-02</b></center</td></tr><tr><td class=w_router><center><b>router</b> / nn</center></td><td class=w_liz><center><b>liz</b> / nnp</center></td><td class=w_→><center><b>→</b> / nn</center></td><td class=w_whistle><center><b>whistle</b> / vbp</center></td><td class=w_amd><center><b>amd</b> / nnp</center></td><td class=w_conrad><center><b>conrad</b> / nnp</center></td></tr><th colspan=6></th><tr><td><center><b>1.59e-02</b></center</td><td><center><b>1.41e-02</b></center</td><td><center><b>1.18e-02</b></center</td><td><center><b>1.17e-02</b></center</td><td><center><b>1.15e-02</b></center</td><td><center><b>1.06e-02</b></center</td></tr><tr><td class=w_kuala_lumpur><center><b>kuala_lumpur</b> / nnp</center></td><td class=w_porsche><center><b>porsche</b> / nnp</center></td><td class=w_bruce><center><b>bruce</b> / nnp</center></td><td class=w_capcom><center><b>capcom</b> / nnp</center></td><td class=w_tyre><center><b>tyre</b> / nns</center></td><td class=w_rand><center><b>rand</b> / nnp</center></td></tr><th colspan=6></th><tr><td><center><b>2.50e-02</b></center</td><td><center><b>1.83e-02</b></center</td><td><center><b>1.55e-02</b></center</td><td><center><b>1.37e-02</b></center</td><td><center><b>1.19e-02</b></center</td><td><center><b>1.10e-02</b></center</td></tr><tr><td class=w_wwe><center><b>wwe</b> / nnp</center></td><td class=w_square><center><b>square</b> / nns</center></td><td class=w_wrestling><center><b>wrestling</b> / nnp</center></td><td class=w_smackdown><center><b>smackdown</b> / nnp</center></td><td class=w_wrestling><center><b>wrestling</b> / nn</center></td><td class=w_wrestling><center><b>wrestling</b> / nnp</center></td></tr><th colspan=6></th><tr><td><center><b>4.14e-03</b></center</td><td><center><b>2.89e-03</b></center</td><td><center><b>2.57e-03</b></center</td><td><center><b>2.38e-03</b></center</td><td><center><b>2.36e-03</b></center</td><td><center><b>2.34e-03</b></center</td></tr><tr><td class=w_use><center><b>use</b> / vbn</center></td><td class=w_system><center><b>system</b> / nn</center></td><td class=w_water><center><b>water</b> / nn</center></td><td class=w_species><center><b>species</b> / nns</center></td><td class=w_aircraft><center><b>aircraft</b> / nn</center></td><td class=w_use><center><b>use</b> / nn</center></td></tr><th colspan=6></th><tr><td><center><b>2.92e-03</b></center</td><td><center><b>2.70e-03</b></center</td><td><center><b>2.67e-03</b></center</td><td><center><b>2.06e-03</b></center</td><td><center><b>2.00e-03</b></center</td><td><center><b>1.95e-03</b></center</td></tr><tr><td class=w_city><center><b>city</b> / nn</center></td><td class=w_government><center><b>government</b> / nn</center></td><td class=w_state><center><b>state</b> / nn</center></td><td class=w_people><center><b>people</b> / nns</center></td><td class=w_law><center><b>law</b> / nn</center></td><td class=w_service><center><b>service</b> / nn</center></td></tr><th colspan=6></th><tr><td><center><b>4.99e-03</b></center</td><td><center><b>3.96e-03</b></center</td><td><center><b>3.33e-03</b></center</td><td><center><b>3.18e-03</b></center</td><td><center><b>3.11e-03</b></center</td><td><center><b>2.98e-03</b></center</td></tr><tr><td class=w_album><center><b>album</b> / nn</center></td><td class=w_film><center><b>film</b> / nn</center></td><td class=w_band><center><b>band</b> / nn</center></td><td class=w_season><center><b>season</b> / nn</center></td><td class=w_song><center><b>song</b> / nn</center></td><td class=w_game><center><b>game</b> / nn</center></td></tr></table>
@@ -4038,7 +4072,7 @@ fantastic.	NNP	2	ccomp
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Deep-Learning">Deep Learning<a class="anchor-link" href="#Deep-Learning">&#182;</a></h1><h3 id="State-of-the-art-in-distributional-semantics,-translation,-text-to-speech">State of the art in distributional semantics, translation, text to speech<a class="anchor-link" href="#State-of-the-art-in-distributional-semantics,-translation,-text-to-speech">&#182;</a></h3><h4 id="Socher-on-Recurrent-NNs-for-NLP">Socher on Recurrent NNs for NLP<a class="anchor-link" href="#Socher-on-Recurrent-NNs-for-NLP">&#182;</a></h4><ul>
+<h1 id="Deep-Learning">Deep Learning<a class="anchor-link" href="#Deep-Learning">&#182;</a></h1><h3 id="State-of-the-art-in-distributional-semantics,-translation,-text-to-speech-...">State of the art in distributional semantics, translation, text to speech ...<a class="anchor-link" href="#State-of-the-art-in-distributional-semantics,-translation,-text-to-speech-...">&#182;</a></h3><h4 id="Socher-on-Recurrent-NNs-for-NLP">Socher on Recurrent NNs for NLP<a class="anchor-link" href="#Socher-on-Recurrent-NNs-for-NLP">&#182;</a></h4><ul>
 <li><a href="https://www.youtube.com/watch?v=tdLmf8t4oqM">https://www.youtube.com/watch?v=tdLmf8t4oqM</a></li>
 </ul>
 <h4 id="The-Unreasonable-Effectiveness-of-Recurrent-Neural-Networks">The Unreasonable Effectiveness of Recurrent Neural Networks<a class="anchor-link" href="#The-Unreasonable-Effectiveness-of-Recurrent-Neural-Networks">&#182;</a></h4><ul>
@@ -4074,48 +4108,6 @@ fantastic.	NNP	2	ccomp
 
 </div>
 </div>
-</div></section><section>
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[131]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="kn">from</span> <span class="nn">spacy.en</span> <span class="k">import</span> <span class="n">English</span>
-<span class="n">nlp</span> <span class="o">=</span> <span class="n">English</span><span class="p">()</span>
-<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">nlp</span><span class="p">(</span><span class="s">&quot;Bill Gates is not the head of Microsoft (MSFT).&quot;</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="o">.</span><span class="n">ent_iob</span><span class="p">,</span> <span class="n">word</span><span class="o">.</span><span class="n">head</span><span class="p">,</span> <span class="n">word</span><span class="o">.</span><span class="n">lemma_</span><span class="p">,</span> <span class="n">word</span><span class="o">.</span><span class="n">pos_</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>0 Bill  bill NOUN
-0 Gates  gate NOUN
-0 is  be VERB
-0 not  not ADV
-0 the  the DET
-0 head  head NOUN
-0 of  of ADP
-0 Microsoft  microsoft NOUN
-0 ( ( PUNCT
-0 MSFT msft NOUN
-0 ) ) PUNCT
-0 . . PUNCT
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 </div>
 </div>
