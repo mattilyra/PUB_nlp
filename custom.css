@@ -1,0 +1,57 @@
+.highlight .o {
+    color: #CCC;
+}
+
+.highlight .ow {
+    color: #B641FF;
+    font-weight: bold;
+}
+
+.highlight .mi {
+    color: #CCC;
+}
+
+.highlight .kn {
+    color: #00F347;
+    font-weight: bold;
+}
+
+.highlight .nn {
+    color: #00D1F3;
+    font-weight: bold;
+}
+
+.highlight .nb {
+    color: #00F347;
+}
+
+.highlight .ow {
+    color: #FF23E5;
+    font-weight: bold;
+}
+
+pre {
+    word-break: break-all;
+    word-wrap: break-word;
+    color: #CCC;
+}
+
+.highlight .s {
+    color: #FB3434;
+}
+
+.highlight .k {
+    color: #0F0;
+    font-weight: bold;
+}
+
+div.cell.code_cell { /* area that contains code + output */
+    background: #fff;
+    font-size: 1.2em;
+}
+
+div.input_area { /* box around box with code */
+    border: none;
+    background: #000;
+    font-size: 1.2em;
+}
