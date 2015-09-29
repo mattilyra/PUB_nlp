@@ -21,6 +21,10 @@
     font-weight: bold;
 }
 
+.highlight .nf {
+    color: #00d1f3;
+}
+
 .highlight .nb {
     color: #00F347;
 }
